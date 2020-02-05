@@ -13,8 +13,11 @@ body{
 footer{
     clear: both; /*sempre que usar a propriedade float em uma div, na proxima div tem que usar esse comando clear: both*/
     color: white;
-    text-align: center;
     margin-top: 100px;
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
 }
 
 h1{
