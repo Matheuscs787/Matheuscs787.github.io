@@ -70,6 +70,11 @@ h1{
 #fotoMinha{ /*propriedade para arredondar a foto*/
     border-radius: 100px;
 }
+
+#fut{
+    width: 100%; min-height: 100px; color: white; float: right; margin-top: 80px;  
+}
+
 /*Final IDs*/
 
 /*Inicio Class container*/
@@ -79,6 +84,14 @@ h1{
 
 .containerFoto{
     width: 960px; margin: 0 auto; margin-top: 100px;
+}
+
+.containerFut{
+    width: 250px; margin: 0 auto; text-shadow: 1px 1px 1px #111111; margin-left: 190px;
+}
+
+.containerFut #fut #faculdade #formacao{
+    margin-left: 64px;
 }
 
 .git{
