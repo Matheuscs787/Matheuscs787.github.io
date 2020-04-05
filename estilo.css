@@ -159,6 +159,11 @@ h1{
     margin-left: 55px;
 }
 
+.git button:hover { 
+    background-color: #ddd; 
+    color: black;
+}
+
 .linkedin{
     float: left; 
     width: 10%; 
@@ -175,5 +180,10 @@ h1{
     background: transparent; 
     margin-top: 5px; 
     margin-left: 55px;
+}
+
+.linkedin button:hover { 
+    background-color: #ddd; 
+    color: black;
 }
 /*Final Class container*/
