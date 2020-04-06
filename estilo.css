@@ -7,22 +7,7 @@ body{
     background-color: rgb(27, 47, 70);
 }
 
-footer{ /*sempre que usar a propriedade float em uma div, na proxima div tem que usar esse comando clear: both*/
-    clear: both; 
-    color: white; 
-    margin-top: 100px; 
-    position: static; 
-    bottom: 0; 
-    text-align: center; 
-    width: 100%;
-}
-
-h1{
-    font-family: Helvetica, Arial;
-}
-
-/*Inicio Top Navigation Bar*/
-
+/*incio Top Navigation Bar*/
 /* Add a black background color to the top navigation */
 .topnav {
     background-color: #333; 
@@ -51,6 +36,20 @@ h1{
     color: white;
 }
 /*Final Top Navigation Bar*/
+
+footer{ /*sempre que usar a propriedade float em uma div, na proxima div tem que usar esse comando clear: both*/
+    clear: both; 
+    color: white; 
+    margin-top: 100px; 
+    position: static; 
+    bottom: 0; 
+    text-align: center; 
+    width: 100%;
+}
+
+h1{
+    font-family: Helvetica, Arial;
+}
 
 .containerFoto{
     float: left;
@@ -112,12 +111,35 @@ h1{
     width: 100%;
 }
 
-#fut{
+#dFormacao{
     width: 100%; 
     min-height: 100px; 
     color: white; 
     float: right; 
     margin-top: 80px;  
+}
+
+.containerFormacao{
+    width: 250px; 
+    margin: 0 auto; 
+    text-shadow: 1px 1px 1px #111111; 
+    margin-left: 190px;
+    text-align: justify;
+}
+
+.btnstyle{
+    background: #069cc2; 
+    border-radius: 6px; 
+    padding: 15px; 
+    cursor: pointer;
+    color: #fff; 
+    border: none; 
+    font-size: 14px;
+}
+
+.btnstyle:hover{
+    cursor: pointer;
+    opacity: 0.9;
 }
 
 #btnTopo{
@@ -136,15 +158,4 @@ h1{
 #btnTopo #aTopo:hover {
     color: mediumseagreen;
     cursor: pointer;
-}
-
-.containerFut{
-    width: 250px; 
-    margin: 0 auto; 
-    text-shadow: 1px 1px 1px #111111; 
-    margin-left: 190px;
-}
-
-.containerFut #fut #faculdade #formacao{
-    margin-left: 64px;
 }
