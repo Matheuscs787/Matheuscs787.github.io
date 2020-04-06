@@ -38,10 +38,6 @@ h1{
     text-decoration: none; 
     font-size: 17px;
 }
-    
-.topnav #teste{ /*caso queira alterar o posicionamento de apenas um item da barra, usar o id teste no item*/
-    float: right;
-}
 
 /* Change the color of links on hover, troca de cor quando passa com o mouse por cima */
 .topnav a:hover { 
@@ -74,14 +70,14 @@ h1{
 }
 
 #social{
-    margin-left: 110px;
-    margin-top: 212px;
+    margin-left: 135px;
+    margin-top: 180px;
 }
 
 .social-icon{
     font-size: 32px;
     color: #838383;
-    margin-left: 10px; 
+    margin-left: 20px; 
 }
 
 .social-icon:hover {
@@ -108,11 +104,6 @@ h1{
 .container #texto #profissao{
     font-size: 14px; 
     font-style: italic;
-}
-
-.containerFoto #foto #legendaFoto{
-    color: white; 
-    margin-left: 10px;
 }
 
 #barra{
