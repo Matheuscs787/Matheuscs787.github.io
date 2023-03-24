@@ -1,21 +1,18 @@
-# vCard - Personal portfolio
+# Portfolio pessoal
 
-![GitHub repo size](https://img.shields.io/github/repo-size/codewithsadee/vcard-personal-portfolio)
-![GitHub stars](https://img.shields.io/github/stars/codewithsadee/vcard-personal-portfolio?style=social)
-![GitHub forks](https://img.shields.io/github/forks/codewithsadee/vcard-personal-portfolio?style=social)
+![GitHub repo size](https://img.shields.io/github/repo-size/matheuscs787/matheuscs787.github.io)
+![GitHub stars](https://img.shields.io/github/stars/matheuscs787/matheuscs787.github.io?style=social)
+![GitHub forks](https://img.shields.io/github/forks/matheuscs787/matheuscs787.github.io?style=social)
 
 
-vCard is a fully responsive personal portfolio website, responsive for all devices, built using HTML, CSS, and JavaScript.
+Esse template é um site totalmente responsivo para todos os dispositivos, construído usando HTML, CSS e JavaScript.
 
 ## Demo
 
 ![vCard Desktop Demo](./website-demo-image/desktop.png "Desktop Demo")
 ![vCard Mobile Demo](./website-demo-image/mobile.png "Mobile Demo")
 
-## Contact
+## Licença
 
-If you want to contact me you can reach me at [Twitter](https://www.twitter.com/codewithsadee).
-
-## License
-
-This project is **free to use** and does not contains any license.
+Esse projeto é **livre para uso** e não tem nenhuma licença.
+O projeto foi baseado no template [vCard](https://github.com/codewithsadee/vcard-personal-portfolio).
