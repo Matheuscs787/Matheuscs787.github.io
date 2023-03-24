@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D'Italia App</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+</head>
+
+<body>
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content2">
+      <!--
+        - #SOBRE
+      -->
+
+      <article class="sobre  active" data-page="sobre">
+
+        <header>
+          <h2 class="h2 article-title">Informações do projeto</h2>
+        </header>
+
+        <section class="sobre-text">
+          <p>
+            Para atender a demanda de uma pizzaria no início da pandemia, eu e dois amigos (Luís e Rafael) fomos chamadas para realizar um levantamento.
+            Depois de algum tempo de conversa com os donos e funcionários da pizzaria, conseguimos entender as necessidades deles e o que esperavam do aplicativo.
+          </p>
+
+          <p>
+            Após isso, começamos o desenvolvimento, o aplicativo foi desenvolvido em Flutter para atender o requisito de multiplataformas (Android e iOS).
+            Através do aplicativo, o usuário pode navegar pelo cardápio, selecionar seus itens, customizando de acordo com tamanho, sabores e adicionais.
+          </p>
+
+          <p>
+            O cliente também pode acompanhar seus pedidos, cadastrar e alterar seus dados pessoais, além de escolher se deseja receber seu pedido em casa ou retirar no estabelecimento.
+            No aplicativo, é informado os dados do pedido, como o valor a ser pago e a forma do pagamento, sendo que o pagamento é feito somente na entrega.
+          </p>
+          
+          <p>
+            O aplicativo se comunica com sua API, que foi desenvolvida em Node.js e é responsável por realizar todo o processamento dos pedidos, a listagem de todos os dados utilizados pelo app, como categorias, cardápio, pedidos, formas de pagamento, mensagens... 
+            A API conta com funções de integração e auditoria de pedidos.
+            <br>Pela necessidade do estabelecimento, a API controla as impressões dos pedidos nnas impressoras de forma automática. Sempre que um pedido chega, é impresso no setor responsável pelo seu preparo e no caixa através de impressoras térmicas.
+          </p>
+
+        </section>
+
+
+        <!--
+          - service
+        -->
+
+        <section class="service">
+
+          <h3 class="h3 service-title">Telas do aplicativo</h3>
+
+          <ul class="service-list">
+
+            <li class="service-item">
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Login</h4>
+                <p class="service-item-text">
+                  Tela de login do aplicativo.
+                </p>
+                <div class="service-icon-box">
+                    <img src="./assets/images/ditalia_app_login.jpg" alt="design icon" width="100%">
+                </div>
+              </div>
+            </li>
+
+            <li class="service-item">
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Cardápio</h4>
+                <p class="service-item-text">
+                  Cardápio para escolher os produtos para pedidos.
+                </p>
+                <div class="service-icon-box">
+                    <img src="./assets/images/ditalia_app_cardapio.jpg" alt="Web development icon" width="100%">
+                </div>
+              </div>
+            </li>
+
+            <li class="service-item">
+                <div class="service-content-box">
+                  <h4 class="h4 service-item-title">Perfil do usuário</h4>
+                  <p class="service-item-text">
+                    Perfil do usuário.
+                  </p>
+                  <div class="service-icon-box">
+                      <img src="./assets/images/ditalia_app_perfil.jpg" alt="Web development icon" width="100%">
+                  </div>
+                </div>
+            </li>
+
+            <li class="service-item">
+                <div class="service-content-box">
+                  <h4 class="h4 service-item-title">Pesquisa de itens</h4>
+                  <p class="service-item-text">
+                    Tela de pesquisa dos itens vendidos.
+                  </p>
+                  <div class="service-icon-box">
+                      <img src="./assets/images/ditalia_app_pesquisa.jpg" alt="Web development icon" width="100%">
+                  </div>
+                </div>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+    </div>
+
+  </main>
+
+</body>
+
+</html>

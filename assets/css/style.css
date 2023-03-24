@@ -510,8 +510,6 @@ main {
 
 .sobre-text p { margin-bottom: 15px; }
 
-
-
 /**
  * #service 
  */
@@ -1448,6 +1446,14 @@ textarea.form-input::-webkit-resizer { display: none; }
   main { margin-bottom: 60px; }
 
   .main-content {
+    position: relative;
+    width: max-content;
+    margin: auto;
+  }
+
+  .main-content2 {
+    padding-top: 60px;
+    padding-bottom: 60px;
     position: relative;
     width: max-content;
     margin: auto;
