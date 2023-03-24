@@ -1,64 +1,904 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head> 
-        <meta charset="utf-8"> 
-        <title>Matheus Souza - Desenvolvedor</title>
-        <link href="estilo.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="resources/css/styles.css" />
-    </head>
-    <span id='topo'></span>
-    <body>
-        <!-- comeco Top Navigation Bar -->
-        <div id="barra" class="topnav">
-            <a class="active" href="#sobre">Sobre</a>
-            <a href="https://medium.com/@matheus787" target="_blank">Materiais Java</a>
-            <a href="https://github.com/Matheuscs787" target="_blank">Portfólio</a>            
-            <a href="Imagens/curriculo.pdf" target="_blank">Currículo</a>
-            <a href="#contato">Contato</a>
-        </div> 
-        <!-- final Top Navigation Bar -->
-        <div> <!--sobre-->
-            <div class="containerFoto">
-                <div id="foto"> <!--Inicio foto-->
-                    <img id="fotoMinha" src="Imagens/Foto Portfolio.jpeg" width="170px">
-                </div>
-                <div id="social">
-                    <a href="http://github.com/Matheuscs787" target="_blank" class="social-icon"><i class="fa fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/math787/" target="_blank" class="social-icon"><i class="fa fa-linkedin"></i></a>
-                    <!-- Final da foto-->
-                </div>
-            </div>
-            <div class="container">
-                <div id="texto">
-                        <h1>Hello World, meu nome é Matheus.</h1>
-                        <a id="profissao"><br>Desenvolvedor backend Java na Ebix.<br></a><br>
-                    Aprendendo frontend com HTML e CSS<br>
-                    Também escrevo materiais para ajudar novatos com Java<br>
-                </div>
-            </div>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Matheus Souza Portfolio</title>
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!--
+    - #MAIN
+  -->
+
+  <main>
+
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img class="imgPerfil" src="./assets/images/perfil.jpeg" alt="Matheus Souza" width="80">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Matheus Souza">Matheus Souza</h1>
+
+          <p class="title">Engenheiro de Software</p>
         </div>
-        <div class="containerFormacao">
-            <div id="dFormacao"> <!--Formação-->
-                <a id="faculdade">
-                    <h3 id="formacao">Formação</h3>
-                    <br>Sou formado em Ciência da Computação,
-                    pela Universidade Estadual do Paraná (UNESPAR), campus de Apucarana. 
-                    <br><br>
-                </a>
-                <a href="http://www.unespar.edu.br/" target="_blank">
-                    <button class="btnstyle">
-                        Conheça a UNESPAR
-                    </button>
-                </a>
-            </div>
-        </div>
-        <footer>
-            <br><br><br>© Copyright 2020 Matheus - All Rights Reversed<br><br>
-        </footer>
-        <button id="btnTopo">
-            <a id="aTopo" href='#topo'>Voltar ao topo</a>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Mostrar formas de contato</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
         </button>
-    </body>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+
+              <a href="mailto:matheus787@hotmail.com" class="contact-link">matheus787@hotmail.com</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Localização</p>
+
+              <address>Paraná, Brasil</address>
+            </div>
+
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+
+          <li class="social-item">
+            <a href="https://www.linkedin.com/in/math787/" target="_blank" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://medium.com/@matheus787" target="_blank" class="social-link">
+              <ion-icon name="logo-medium"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://github.com/Matheuscs787" target="_blank" class="social-link">
+              <ion-icon name="logo-github"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </aside>
+
+
+
+
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <button class="navbar-link  active" data-nav-link>Sobre</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Currículo</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Portfolio</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Blog</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Contato</button>
+          </li>
+
+        </ul>
+
+      </nav>
+
+
+
+
+
+      <!--
+        - #SOBRE
+      -->
+
+      <article class="sobre  active" data-page="sobre">
+
+        <header>
+          <h2 class="h2 article-title">Sobre mim</h2>
+        </header>
+
+        <section class="sobre-text">
+          <p>
+            Formado em Ciência da Computação pela Unespar, campus de Apucarana, trabalho com desenvolvimento web desde 2019, com foco no backend com Java.
+            Atualmente estou cursando uma especialização em Java pela UTFPR, campus de Cornélio Procópio.
+          </p>
+
+          <p>
+            Meu trabalho é melhorar a funcionalidade de sistemas web, desenvolver novas funcionalidades, melhorar os processos já existentes.
+            Atualmente utilizo Java 7, DB2, Oracle e webservices. Mas também tenho conhecimento em Java 8, Springboot, MySQL e AngularJS.
+            Para versionamento de código, tenho experiência em GIT, SVN e RTC.
+          </p>
+        </section>
+
+
+        <!--
+          - service
+        -->
+
+        <section class="service">
+
+          <h3 class="h3 service-title">O que estou fazendo</h3>
+
+          <ul class="service-list">
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-design.svg
+                " alt="design icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Frontend</h4>
+
+                <p class="service-item-text">
+                  Estudando html, css e js para melhorar minhas habilidades.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Desenvolvimento Web</h4>
+
+                <p class="service-item-text">
+                  Desenvolvimento de sites em nível profissional.
+                </p>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section>
+
+        <!--
+          - clients
+        -->
+
+        <section class="clients">
+
+          <h3 class="h3 clients-title">Empresas onde trabalhei</h3>
+
+          <ul class="clients-list has-scrollbar">
+
+            <li class="clients-item">
+              <a href="https://www.ebixlatinamerica.com.br" target="_blank">
+                <img src="./assets/images/Ebix_logo_logotype.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="https://www.accenture.com/br-pt?c=acn_glb_brandexpressiongoogle_11608449&n=psgs_1020&gclid=Cj0KCQjw8e-gBhD0ARIsAJiDsaWd4hChjs-c16Zc0f9fkFQ5icDUIRTcsjGUqvMyX-N00Au_ZedYmXwaAqJwEALw_wcB&gclsrc=aw.ds" target="_blank">
+                <img src="./assets/images/accenture-logo-1-1.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="https://www.tcs.com/careers/brazil" target="_blank">
+                <img src="./assets/images/Tata_Consultancy_Services_Logo.svg.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="https://made4it.com.br" target="_blank">
+                <img src="./assets/images/logotipo-site-300x92.png" alt="client logo">
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #Currículo
+      -->
+
+      <article class="currículo" data-page="currículo">
+
+        <header>
+          <h2 class="h2 article-title">Currículo</h2>
+        </header>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Educação</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Universidade Tecnológica Federal do Paraná - UTFPR</h4>
+
+              <span>2022 — 2023</span>
+
+              <p class="timeline-text">
+                Curso de pós graduação com o título de Especialização em Tecnologia Java.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Universidade Estadual do Paraná - UNESPAR</h4>
+
+              <span>2016 — 2021</span>
+
+              <p class="timeline-text">
+                Graduação em Ciência da Computação
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Experiência</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Software Engineer Backend- Ebix Latin America</h4>
+
+              <span>08/2022 — Present</span>
+
+              <p class="timeline-text">
+                Atuando como Analista Desenvolvedor em projetos de software de grande porte, para a vertical de Seguro da Ebix.
+                <br><br>PRINCIPAIS TECNOLOGIAS UTILIZADAS:
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;- Java 7
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;- Oracle
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;- DB2
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;- SVN
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;- SCRUM
+                <br><br>PRINCIPAIS ATIVIDADES DESEMPENHADAS:
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;- Levantamento de requisitos, proposta de solução e desenvolvimento de novos módulos para evolução de softwares.
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;- Análise e correção de problemas ocorridos em ambiente produtivo.
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;- Refatoração de código complexo visando melhorar a performance.
+                <br><br>ECOSSISTEMA DE TECNOLOGIAS:
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;- Spring Framework, JasperReports, Maven, Java Enterprise Edition (Java EE), Java Standard Edition (Java SE), Tomcat, Jira,  DBeaver, SVN, Oracle, DB2, Orientação a Objetos, Design Patterns, Struts, WebShere, Webservices, REST API, SOAP API.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Software Engineer Fullstack - Accenture Brasil</h4>
+
+              <span>03/2022 - 08/2022</span>
+
+              <p class="timeline-text">
+                Atuando como Analista Desenvolvedor em projetos de software de grande porte, para a vertical de Telefonia da Accenture.
+                <br><br>PRINCIPAIS TECNOLOGIAS UTILIZADAS:
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;- Java 7
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;- JSF
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;- Oracle
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;- Git
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;- SCRUM
+                <br><br>PRINCIPAIS ATIVIDADES DESEMPENHADAS:
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;- Levantamento de requisitos, proposta de solução e desenvolvimento de novos módulos para evolução de softwares.
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;- Análise e correção de problemas ocorridos em ambiente produtivo.
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;- Refatoração de código complexo visando melhorar a performance.
+                <br><br>ECOSSISTEMA DE TECNOLOGIAS:
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;- Spring Framework, JasperReports, Maven, Java Enterprise Edition (Java EE), Java Standard Edition (Java SE), Hibernate, JPA, HTML, CSS, Tomcat, Jira,  DBeaver, GIT, Oracle, Orientação a Objetos, Design Patterns.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Trainee Fullstack- Tata Consultancy Services</h4>
+
+              <span>03/2021 - 03/2022</span>
+
+              <p class="timeline-text">
+                Atuando como Analista Desenvolvedor em projetos de software de grande porte, para a vertical de Energy da TCS.
+                <br><br>PRINCIPAIS TECNOLOGIAS UTILIZADAS:
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;- Java 7/8/11
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;- Angular
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;- Oracle
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;- Git, SVN, RTC
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;- SCRUM
+                <br><br>PRINCIPAIS ATIVIDADES DESEMPENHADAS:
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;- Levantamento de requisitos, proposta de solução e desenvolvimento de novos módulos para evolução de softwares.
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;- Análise e correção de problemas ocorridos em ambiente produtivo.
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;- Refatoração de código complexo visando melhorar a performance.
+                <br><br>ECOSSISTEMA DE TECNOLOGIAS:
+                <br>&nbsp;&nbsp;&nbsp;&nbsp;- Spring Framework, Rest API, Webservices, JasperReports, Maven, Java Enterprise Edition (Java EE), Java Standard Edition (Java SE), Hibernate, JPA, HTML, CSS, Javascript, jQuery, Bootstrap, Weblogic, Tomcat, Jira, IntelliJ IDEA, SQLDeveloper, DBeaver, GIT, Oracle, SQL Server, Orientação a Objetos, Design Patterns.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">NOC - Made4IT</h4>
+
+              <span>06/2020 - 03/2021</span>
+
+              <p class="timeline-text">
+                Suporte ao usuário e monitoramento de infraestrutura de provedores de internet.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Analista de desenvolvimento de software Fullstack- RL Software de Gestão</h4>
+
+              <span>08/2019 - 06/2020</span>
+
+              <p class="timeline-text">
+                Sustentação e desenvolvimento de novas funcionalidades em aplicações ERP e PDV, utilizando Delphi.
+                <br>Modelagem e consulta em banco de dados Firebird
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="skill">
+
+          <h3 class="h3 skills-title">Habilidades</h3>
+
+          <ul class="skills-list content-card">
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Java</h5>
+                <data value="80">80%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 80%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">SQL</h5>
+                <data value="70">70%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 70%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">AngularJS</h5>
+                <data value="40">40%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 40%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">versionamento de código</h5>
+                <data value="90">90%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 90%;"></div>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #PORTFOLIO
+      -->
+
+      <article class="portfolio" data-page="portfolio">
+
+        <header>
+          <h2 class="h2 article-title">Portfolio</h2>
+        </header>
+
+        <section class="projects">
+
+          <ul class="filter-list">
+
+            <li class="filter-item">
+              <button class="active" data-filter-btn>Todos</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Plugin para navegador</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Applications</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Web development</button>
+            </li>
+
+          </ul>
+
+          <div class="filter-select-box">
+
+            <button class="filter-select" data-select>
+
+              <div class="select-value" data-selecct-value>Select category</div>
+
+              <div class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </div>
+
+            </button>
+
+            <ul class="select-list">
+
+              <li class="select-item">
+                <button data-select-item>Todos</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Plugin para navegador</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Applications</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Web development</button>
+              </li>
+
+            </ul>
+
+          </div>
+
+          <ul class="project-list">
+
+            <li class="project-item  active" data-filter-item data-category="plugin para navegador">
+              <a href="https://github.com/Matheuscs787/GeneratorPassword" target="_blank">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/generatorPassaword.png" alt="finance" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">GeneratorPassword</h3>
+
+                <p class="project-category">Plugin para navegador</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-2.png" alt="orizon" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Orizon</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-3.jpg" alt="fundo" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Fundo</h3>
+
+                <p class="project-category">Web design</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="applications">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-4.png" alt="brawlhalla" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Brawlhalla</h3>
+
+                <p class="project-category">Applications</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-5.png" alt="dsm." loading="lazy">
+                </figure>
+
+                <h3 class="project-title">DSM.</h3>
+
+                <p class="project-category">Web design</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-6.png" alt="metaspark" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">MetaSpark</h3>
+
+                <p class="project-category">Web design</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-7.png" alt="summary" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Summary</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="applications">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-8.jpg" alt="task manager" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Task Manager</h3>
+
+                <p class="project-category">Applications</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-9.png" alt="arrival" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Arrival</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #BLOG
+      -->
+
+      <article class="blog" data-page="blog">
+
+        <header>
+          <h2 class="h2 article-title">Blog</h2>
+        </header>
+
+        <section class="blog-posts">
+
+          <ul class="blog-posts-list">
+
+            <li class="blog-post-item">
+              <a href="https://medium.com/@matheus787/java-para-iniciantes-64e082ad9d53" target="_blank">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/capaLivro.png" alt="Java para iniciantes" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Java</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Mar 23, 2023</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Java para iniciantes</h3>
+
+                  <p class="blog-text">
+                    Apresentação do perfil no Medium
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="https://medium.com/@matheus787/resumo-das-versões-até-o-java-se-8-806f626899e2" target="_blank">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/capaLivro.png" alt="Best fonts every designer" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Java</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Mar 23, 2023</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Resumo das versões Java até o Java SE 8</h3>
+
+                  <p class="blog-text">
+                    Um breve resumo das versões do Java até chegar na versão 8, baseado no livro Java para iniciantes 6° edição.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+            
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #CONTACT
+      -->
+
+      <article class="contato" data-page="contato">
+
+        <header>
+          <h2 class="h2 article-title">Contato</h2>
+        </header>
+
+        <section class="mapbox" data-mapbox>
+          <figure>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3714255.2424995364!2d-51.32142114999999!3d-24.616708550000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94db0b9430b8629d%3A0xe893fd5063cef061!2zUGFyYW7DoQ!5e0!3m2!1spt-BR!2sbr!4v1679613721569!5m2!1spt-BR!2sbr"
+              width="400" height="300" loading="lazy"></iframe>
+          </figure>
+        </section>
+
+        <section class="contact-form">
+
+          <h3 class="h3 form-title">Form para contato</h3>
+
+          <form action="#" class="form" data-form>
+
+            <div class="input-wrapper">
+              <input type="text" name="fullname" class="form-input" placeholder="Nome completo" required data-form-input>
+
+              <input type="email" name="email" class="form-input" placeholder="Endereço de email" required data-form-input>
+            </div>
+
+            <textarea name="message" class="form-input" placeholder="Função de enviar email desativada por não possuir servidor SMTP
+              Para entrar em contato, envie email para matheus787@hotmail.com" required data-form-input></textarea>
+
+            <button class="form-btn" type="submit" disabled>
+              <ion-icon name="paper-plane"></ion-icon>
+              <span>Enviar mensagem</span>
+            </button>
+
+          </form>
+
+        </section>
+
+      </article>
+
+    </div>
+
+  </main>
+
+
+
+
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
 </html>
-<!-- Para comentarios usar Ctrl + ; -->
