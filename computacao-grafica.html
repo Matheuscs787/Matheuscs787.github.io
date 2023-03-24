@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computação Gráfica</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+</head>
+
+<body>
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content2">
+      <!--
+        - #SOBRE
+      -->
+
+      <article class="sobre  active" data-page="sobre">
+
+        <header>
+          <h2 class="h2 article-title">Computação Gráfica - Informações do projeto</h2>        
+        </header>
+
+        <section class="sobre-text">          
+          <p>
+            Esse é um compilado de atividades realizadas na matéria de computação gráfica, durante o curso de Ciência da Computação.
+          </p>
+
+          <p>
+            Para a realização das atividades, foram usadas as seguintes ferramentas, C++, OpenGL, Freeglut e MinGW.
+          </p>
+
+        </section>
+
+
+        <!--
+          - service
+        -->
+
+        <section class="service">
+
+          <h3 class="h3 service-title">Demais informações</h3>
+
+          <ul class="service-list">
+
+            <li class="service-item">
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Tutorial de instalação das ferramentas</h4>
+                <p class="service-item-text">
+                    - Descompactar o arquivo .7z do MinGW e colocar a pasta principal na raiz do disco rígido (C:\mingw64);
+                    <br><br>- Abrir as Variáveis de Ambiente de Sistema e adicionar a pasta “C:\mingw64\bin” à variável PATH;
+                    <br><br>- Descompactar o arquivo .zip do FreeGlut e colocar a pasta principal dentro da pasta do mingw64 preferencialmente;
+                    <br><br>- Ao criar um novo projeto em C++ no Eclipse, selecione o compilador MinGW, e utilize como base o projeto “Hello World” padrão;
+                    <br><br>- Vá até as propriedades do projeto, vá em C/C++ Build > Settings > GCC C++ Compiler > Includes e adicione a pasta “include” do FreeGLUT (C:\mingw64\freeglut\include) na lista de include paths;
+                    <br><br>- Ainda nas propriedades da C/C++ Build, vá em MinGW C++ Linker > Libraries e adicione as bibliotecas opengl32, glu32 e freeglut na lista de libraries;
+                    <br><br>- Adicione a pasta “C:\mingw64\freeglut\lib\x64” do FreeGLUT à library search path na mesma tela. (Caso utilize um sistema de 32 bits, adicione a freeglut/lib/ em vez disso);
+                    <br><br>- Copie o arquivo “freeglut.dll” na pasta freeglut/bin/x64 para a C:\Windows\System32 OU apenas copie este arquivo para a mesma pasta onde o executável do projeto está localizado (provavelmente dentro de “seu_projeto\Debug\”)
+                    <br><br>- Teste seu código e verifique se o programa roda normalmente.
+                </p>                
+              </div>
+            </li>
+
+            <li class="service-item">
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Testando</h4>
+                <p class="service-item-text">
+                    Para testar se código está funcionando, pode se usar o projeto de exemplo padrão, mas também disponibilizei um código escrito por mim.
+                    <br>O código está disponível no meu GitHub, além de vários outros exemplos.
+                </p>
+                
+              </div>
+            </li>
+           
+          </ul>
+          
+        </section>
+
+        <button class="form-btn" onclick="location.href='https://github.com/Matheuscs787/computacaoGrafica'">
+          <ion-icon name="book-outline"></ion-icon>
+          <span>Repositório no GitHub</span>
+        </button>
+
+      </article>
+
+    </div>
+
+  </main>
+
+</body>
+
+</html>
