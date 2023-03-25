@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TCC</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+</head>
+
+<body>
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content2">
+      <!--
+        - #SOBRE
+      -->
+
+      <article class="sobre  active" data-page="sobre">
+
+        <header>
+          <h2 class="h2 article-title">TCC - Informações do projeto</h2>
+        </header>
+
+        <section class="sobre-text">
+          <p>Tema: Reconhecimento de placas de veículos por meio de imagens<br>
+             Orientador: Fábio Matsunaga
+          </p>
+
+          <p>
+            Para a detecção das placas foi utilizado o YOLO(Na época, o YOLO era o estado da arte), ele é uma ferramenta para reconhecimento e que faz uso de rede neural artificial, conhecidas como RNA.
+            Para isso, o YOLO utiliza uma Rede Neural Convolucional. A CNN é uma variação da MLP, que é capaz de aplicar filtros em dados visuais e manter a relação de vizinhança entre os pixels da imagem. É comum aplicar camadas de convolução sobre o dado de entrada, essas camadas são compostas por diversos neurônios, cada um com a responsabilidade de aplicar um filtro em um pedaço específico da imagem, com isso temos diversos filtros sendo aplicados.
+          </p>
+
+          <p>
+            Com base nos resultados obtidos, apesar da taxa de acerto do OCR não ter um resultado ótimo como o detector de placas teve, pode se concluir que através de fotos ou vídeos podemos identificar a placa de um veículo e consultar sua situação legal. 
+            Além disso, conseguimos ter um maior tempo buscando veículos pois não é necessário ter vários agentes em campo como no caso de blitz e também é necessário menos recursos para a busca de veículos, como viaturas e agentes, sendo que esses recursos podem ser realocados para outras necessidades, como pratulhamento preventivo.            
+          </p>
+          
+        </section>
+
+
+        <!--
+          - service
+        -->
+
+        <section class="service">
+
+          <h3 class="h3 service-title">Processos</h3>
+
+          <ul class="service-list">
+
+            <li class="service-item">
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">ROI e escala de cinza</h4>
+                <p class="service-item-text">
+                    Quando o YOLO faz a varredura na imagem ele encontra minha região de interesse, chamada de ROI. Com o ROI obtido, são realizados alguns tratamentos na imagem, que são a escala de cinza e a binarização.
+                    Os filtros são aplicados para dar o contraste da imagem para o OCR. Uma imagem no padrão RGB, tem 3 conjuntos de valores que vão de 0 a 255 e eles representam as cores vermelho, verde e azul.                     
+                </p>
+                <p class="service-item-text">
+                    Já quando aplicamos o filtro da escala de cinza a imagem passa a ter apenas um conjunto de valores que vai de 0 a 255.
+                </p>
+                <br>
+                <p class="service-item-text">
+                    Exemplo do ROI e da escala de cinza.
+                </p>                
+                <div class="service-icon-box">
+                    <img src="./assets/images/tcc/escala-cinza.png" alt="design icon" width="100%">
+                </div>
+                <br>                
+              </div>
+            </li>
+
+            <li class="service-item">
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Binarização</h4>
+                <p class="service-item-text">
+                    Com a binarização diminuimos esse intervalo ainda mais, e ele passa a ter um intervalo somente entre 0 e 1.
+                    Para obter o valor de cinza, pegamos o valor do pixel em cada conjunto de valores da imagem no padrão RGB e calculamos a média. Já para a binarização, pegamos o valor do pixel na escala de cinza e vemos se o valor dele é maior ou menor que a metade do intervalo que a escala de cinza abrange, caso menor ele assume o valor de 0 e caso maior ele assume o valor de 1.
+                </p>
+                <br>
+                <p class="service-item-text">
+                    Exemplo de Binarização.
+                </p>
+                <div class="service-icon-box">
+                    <img src="./assets/images/tcc/binarizacao.png" alt="Web development icon" width="100%">
+                </div>
+              </div>
+            </li>
+
+            <li class="service-item">
+                <div class="service-content-box">
+                  <h4 class="h4 service-item-title">Pipeline do projeto e exemplo de imagem</h4>                  
+                  <p class="service-item-text">
+                    O pipeline do projeto pode ser representado através da aquisição da imagem, detecção do objeto, filtragem, do OCR e da consulta da placa.
+                  </p>
+                  <p class="service-item-text">
+                    Para a aquisição da imagem foi utilizada uma câmera situada em uma via, sendo que a localização, qualidade e resolução da imagem são desconhecidas.
+                  </p>
+                  <br>
+                  <p class="service-item-text">
+                    Exemplo de imagem obtida pela câmera.
+                  </p>
+                  <div class="service-icon-box">
+                      <img src="./assets/images/tcc/deteccao.png" alt="Web development icon" width="100%">
+                  </div>
+                  <br>
+                  <p class="service-item-text">
+                    Para o YOLO realizar a detecção da placa foi necessário realizar o treinamento de um dataset, pois seu dataset padrão não é treinado para reconhecer placas. 
+                  </p>
+                  <p class="service-item-text">
+                    Na imagem acima, pode ser visto, a certeza do detector de que o objeto encontrado é o objeto buscado, essa taxa é representada por um valor entre 0 e 1. Nesse exemplo o detector tem 0.99 de certeza, ou seja, 99%.
+                  </p>
+                </div>
+            </li>
+
+            <li class="service-item">
+                <div class="service-content-box">
+                  <h4 class="h4 service-item-title">Pesquisa da placa</h4>
+                  <p class="service-item-text">
+                    Após a imagem passar pelo detector, é obtido o ROI e nele é aplicado a escala de cinza e a binarização para dar o contraste, deixando mais evidente os caracteres na imagem.
+                  </p>
+                  <p class="service-item-text">
+                    Após ter o contraste realçado o ROI é passado para o OCR, que é realizado pelo Pytesseract, que é uma biblioteca OpenSource do Tesseract para o Python. E ela é utilizada para o reconhecimento de caracteres.
+                  </p>
+                  <p class="service-item-text">
+                    O tesseract funciona através de reconhecimento de padrões, porém as versões mais recentes agora contam com OCR baseado em RNA. Após o ROI passar pelo OCR é retornado o resultado da identificação de caracteres em um formato de String.
+                  </p>
+                  <p class="service-item-text">
+                    Para consultar a placa, foi utilizada uma API, sendo que a String obtida do OCR é passada como parâmetro para a consulta. Como resposta da consulta na API, os dados do veículo são retornados no formato JSON.
+                  </p>
+                  <br>
+                  <p class="service-item-text">
+                    Exemplo de consulta na API.
+                  </p>
+                  <div class="service-icon-box">
+                      <img src="./assets/images/tcc/json-consulta.png" alt="Web development icon" width="100%">
+                  </div>
+                </div>
+            </li>
+
+          </ul>
+
+        </section>
+
+        <button class="form-btn" type="button" onclick="location.href='./assets/pdf/TCC.pdf'">
+            <ion-icon name="book-outline"></ion-icon>
+            <span>TCC completo em PDF</span>
+          </button>
+
+      </article>
+
+    </div>
+
+  </main>
+
+</body>
+
+</html>
