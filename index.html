@@ -1,904 +1,656 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR" data-lang="pt" data-theme="light"
+  data-title-pt="Matheus Souza — Engenheiro de Software"
+  data-title-en="Matheus Souza — Software Engineer">
 
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Matheus Souza Portfólio</title>
+  <title>Matheus Souza — Engenheiro de Software</title>
+  <meta name="description" content="Portfólio de Matheus Souza, Engenheiro de Software com foco em backend Java. Software Engineer portfolio.">
 
-  <!--
-    - favicon
-  -->
-  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Matheus Souza — Engenheiro de Software">
+  <meta property="og:description" content="Portfólio · Portfolio">
+  <meta property="og:url" content="https://matheuscs787.github.io/">
+  <meta property="og:image" content="https://matheuscs787.github.io/assets/images/perfil.jpeg">
 
-  <!--
-    - custom css link
-  -->
-  <link rel="stylesheet" href="./assets/css/style.css">
+  <meta name="theme-color" content="#eef1ee" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0b0f0d" media="(prefers-color-scheme: dark)">
 
-  <!--
-    - google font link
-  -->
+  <link rel="icon" href="./assets/images/favicon.svg?v=2" type="image/svg+xml">
+  <link rel="icon" href="./assets/images/favicon.ico?v=2" sizes="48x48">
+  <link rel="apple-touch-icon" href="./assets/images/apple-touch-icon.png?v=2">
+
+  <script src="./assets/js/prefs.js"></script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
 
   <!--
-    - #MAIN
+    - #HEADER
   -->
 
-  <main>
+  <header class="site-header">
+    <div class="wrap">
 
-    <!--
-      - #SIDEBAR
-    -->
+      <a href="#top" class="brand"><i>~/</i>matheus<span class="caret" aria-hidden="true"></span></a>
 
-    <aside class="sidebar" data-sidebar>
-
-      <div class="sidebar-info">
-
-        <figure class="avatar-box">
-          <img class="imgPerfil" src="./assets/images/perfil.jpeg" alt="Matheus Souza" width="80">
-        </figure>
-
-        <div class="info-content">
-          <h1 class="name" title="Matheus Souza">Matheus Souza</h1>
-
-          <p class="title">Engenheiro de Software</p>
-        </div>
-
-        <button class="info_more-btn" data-sidebar-btn>
-          <span>Mostrar formas de contato</span>
-
-          <ion-icon name="chevron-down"></ion-icon>
-        </button>
-
-      </div>
-
-      <div class="sidebar-info_more">
-
-        <div class="separator"></div>
-
-        <ul class="contacts-list">
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="mail-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Email</p>
-
-              <a href="mailto:matheus787@hotmail.com" class="contact-link">matheus787@hotmail.com</a>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="location-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Localização</p>
-
-              <address>Paraná, Brasil</address>
-            </div>
-
-          </li>
-
-        </ul>
-
-        <div class="separator"></div>
-
-        <ul class="social-list">
-
-          <li class="social-item">
-            <a href="https://www.linkedin.com/in/math787/" target="_blank" class="social-link">
-              <ion-icon name="logo-linkedin"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="https://medium.com/@matheus787" target="_blank" class="social-link">
-              <ion-icon name="logo-medium"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="https://github.com/Matheuscs787" target="_blank" class="social-link">
-              <ion-icon name="logo-github"></ion-icon>
-            </a>
-          </li>
-
-        </ul>
-
-      </div>
-
-    </aside>
-
-
-
-
-
-    <!--
-      - #main-content
-    -->
-
-    <div class="main-content">
-
-      <!--
-        - #NAVBAR
-      -->
-
-      <nav class="navbar">
-
-        <ul class="navbar-list">
-
-          <li class="navbar-item">
-            <button class="navbar-link  active" data-nav-link>Sobre</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Currículo</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Portfólio</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Blog</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Contato</button>
-          </li>
-
-        </ul>
-
+      <nav class="site-nav">
+        <a href="#experiencia"><span lang="pt-BR">./experiência</span><span lang="en">./experience</span></a>
+        <a href="#certificacoes"><span lang="pt-BR">./certificações</span><span lang="en">./certifications</span></a>
+        <a href="#blog">./blog</a>
+        <a href="#contato"><span lang="pt-BR">./contato</span><span lang="en">./contact</span></a>
       </nav>
 
-
-
-
-
-      <!--
-        - #SOBRE
-      -->
-
-      <article class="sobre  active" data-page="sobre">
-
-        <header>
-          <h2 class="h2 article-title">Sobre mim</h2>
-        </header>
-
-        <section class="sobre-text">
-          <p>
-            Formado em Ciência da Computação pela Unespar, campus de Apucarana, trabalho com desenvolvimento web desde 2019, com foco no backend com Java.
-            Pós graduado, com o título de especialista em tecnologia Java pela UTFPR, campus de Cornélio Procópio.
-            Cursando mestrado em Ciência da Computação como aluno especial pela UEL.
-          </p>
-
-          <p>
-            Meu trabalho é melhorar a funcionalidade de sistemas web, desenvolver novas funcionalidades, melhorar os processos já existentes.
-            Atualmente utilizo Java 7, DB2, Oracle e webservices. Mas também tenho conhecimento em Java 8+, Springboot, MySQL e AngularJS.
-            Para versionamento de código, tenho experiência em GIT, SVN e RTC.            
-          </p>
-        </section>
-
-
-        <!--
-          - service
-        -->
-
-        <section class="service">
-
-          <h3 class="h3 service-title">O que estou fazendo</h3>
-
-          <ul class="service-list">
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-design.svg
-                " alt="design icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Mestrado</h4>
-
-                <p class="service-item-text">
-                  Estou cursando mestrado em Ciência da Computação, como aluno especial. Atualmente estudando Engenharia de Software.
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Desenvolvimento</h4>
-
-                <p class="service-item-text">
-                  Desenvolvimento web e de aplicativos em nível profissional. Também sou professor de programação, atualmente ministro um curso de Java.
-                </p>
-              </div>
-
-            </li>
-
-          </ul>
-
-        </section>
-
-        <!--
-          - clients
-        -->
-
-        <section class="clients">
-
-          <h3 class="h3 clients-title">Empresas onde trabalhei</h3>
-
-          <ul class="clients-list has-scrollbar">
-
-            <li class="clients-item">
-              <a href="https://www.ebixlatinamerica.com.br" target="_blank">
-                <img src="./assets/images/logos-empresas/logo-ebix.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="https://www.accenture.com/br-pt?c=acn_glb_brandexpressiongoogle_11608449&n=psgs_1020&gclid=Cj0KCQjw8e-gBhD0ARIsAJiDsaWd4hChjs-c16Zc0f9fkFQ5icDUIRTcsjGUqvMyX-N00Au_ZedYmXwaAqJwEALw_wcB&gclsrc=aw.ds" target="_blank">
-                <img src="./assets/images/logos-empresas/logo-accenture.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="https://www.tcs.com/careers/brazil" target="_blank">
-                <img src="./assets/images/logos-empresas/logo-tcs.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="https://made4it.com.br" target="_blank">
-                <img src="./assets/images/logos-empresas/logo-made.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="https://www.rlsistemas.com.br" target="_blank">
-                <img src="./assets/images/logos-empresas/logo-rl.png" alt="client logo">
-              </a>
-            </li>
-
-          </ul>
-
-        </section>
-
-      </article>
-
-
-      <!--
-        - #Currículo
-      -->
-
-      <article class="currículo" data-page="currículo">
-
-        <header>
-          <h2 class="h2 article-title">Currículo</h2>
-        </header>
-
-        <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">Educação</h3>
-
-            <button class="form-btn" type="button" onclick="location.href='./assets/pdf/curriculo.pdf'">
-              <ion-icon name="book-outline"></ion-icon>
-              <span>Currículo em PDF</span>
-            </button>
-
-          </div>
-
-          <ol class="timeline-list">
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Universidade Estadual de Londrina - UEL</h4>
-
-              <span>2023 — 2025</span>
-
-              <p class="timeline-text">
-                Aluno especial de mestrado em Ciência da Computação, cursando a matéria de Engenharia de Software.
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Universidade Tecnológica Federal do Paraná - UTFPR</h4>
-
-              <span>2022 — 2023</span>
-
-              <p class="timeline-text">
-                Curso de pós graduação com o título de Especialização em Tecnologia Java.
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Universidade Estadual do Paraná - UNESPAR</h4>
-
-              <span>2016 — 2021</span>
-
-              <p class="timeline-text">
-                Graduação em Ciência da Computação
-              </p>
-
-            </li>
-
-          </ol>
-
-        </section>
-
-        <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">Experiência</h3>
-          </div>
-
-          <ol class="timeline-list">
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Engenheiro de Software Backend- Ebix Latin America</h4>
-
-              <span>08/2022 — Atual</span>
-
-              <p class="timeline-text">
-                Atuando como Analista Desenvolvedor em projetos de software de grande porte, para a vertical de Seguro da Ebix.
-                <br><br>PRINCIPAIS TECNOLOGIAS UTILIZADAS:
-                <br>&nbsp;&nbsp;&nbsp;&nbsp;- Java 7
-                <br>&nbsp;&nbsp;&nbsp;&nbsp;- Oracle
-                <br>&nbsp;&nbsp;&nbsp;&nbsp;- DB2
-                <br>&nbsp;&nbsp;&nbsp;&nbsp;- SVN
-                <br>&nbsp;&nbsp;&nbsp;&nbsp;- SCRUM
-                <br><br>PRINCIPAIS ATIVIDADES DESEMPENHADAS:
-                <br>&nbsp;&nbsp;&nbsp;&nbsp;- Levantamento de requisitos, proposta de solução e desenvolvimento de novos módulos para evolução de softwares.
-                <br>&nbsp;&nbsp;&nbsp;&nbsp;- Análise e correção de problemas ocorridos em ambiente produtivo.
-                <br>&nbsp;&nbsp;&nbsp;&nbsp;- Refatoração de código complexo visando melhorar a performance.
-                <br><br>ECOSSISTEMA DE TECNOLOGIAS:
-                <br>&nbsp;&nbsp;&nbsp;&nbsp;- Spring Framework, JasperReports, Maven, Java Enterprise Edition (Java EE), Java Standard Edition (Java SE), Tomcat, Jira,  DBeaver, SVN, Oracle, DB2, Orientação a Objetos, Design Patterns, Struts, WebSphere, Webservices, REST API, SOAP API.
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Engenheiro de Software Fullstack - Accenture Brasil</h4>
-
-              <span>03/2022 - 08/2022</span>
-
-              <p class="timeline-text">
-                Atuando como Analista Desenvolvedor em projetos de software de grande porte, para a vertical de Telefonia da Accenture.
-                <br><br>PRINCIPAIS TECNOLOGIAS UTILIZADAS:
-                <br>&nbsp;&nbsp;&nbsp;&nbsp;- Java 7
-                <br>&nbsp;&nbsp;&nbsp;&nbsp;- JSF
-                <br>&nbsp;&nbsp;&nbsp;&nbsp;- Oracle
-                <br>&nbsp;&nbsp;&nbsp;&nbsp;- Git
-                <br>&nbsp;&nbsp;&nbsp;&nbsp;- SCRUM
-                <br><br>PRINCIPAIS ATIVIDADES DESEMPENHADAS:
-                <br>&nbsp;&nbsp;&nbsp;&nbsp;- Levantamento de requisitos, proposta de solução e desenvolvimento de novos módulos para evolução de softwares.
-                <br>&nbsp;&nbsp;&nbsp;&nbsp;- Análise e correção de problemas ocorridos em ambiente produtivo.
-                <br>&nbsp;&nbsp;&nbsp;&nbsp;- Refatoração de código complexo visando melhorar a performance.
-                <br><br>ECOSSISTEMA DE TECNOLOGIAS:
-                <br>&nbsp;&nbsp;&nbsp;&nbsp;- Spring Framework, JasperReports, Maven, Java Enterprise Edition (Java EE), Java Standard Edition (Java SE), Hibernate, JPA, HTML, CSS, Tomcat, Jira,  DBeaver, GIT, Oracle, Orientação a Objetos, Design Patterns.
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Trainee Fullstack- Tata Consultancy Services</h4>
-
-              <span>03/2021 - 03/2022</span>
-
-              <p class="timeline-text">
-                Atuando como Analista Desenvolvedor em projetos de software de grande porte, para a vertical de Energy da TCS.
-                <br><br>PRINCIPAIS TECNOLOGIAS UTILIZADAS:
-                <br>&nbsp;&nbsp;&nbsp;&nbsp;- Java 7/8/11
-                <br>&nbsp;&nbsp;&nbsp;&nbsp;- Angular
-                <br>&nbsp;&nbsp;&nbsp;&nbsp;- Oracle
-                <br>&nbsp;&nbsp;&nbsp;&nbsp;- Git, SVN, RTC
-                <br>&nbsp;&nbsp;&nbsp;&nbsp;- SCRUM
-                <br><br>PRINCIPAIS ATIVIDADES DESEMPENHADAS:
-                <br>&nbsp;&nbsp;&nbsp;&nbsp;- Levantamento de requisitos, proposta de solução e desenvolvimento de novos módulos para evolução de softwares.
-                <br>&nbsp;&nbsp;&nbsp;&nbsp;- Análise e correção de problemas ocorridos em ambiente produtivo.
-                <br>&nbsp;&nbsp;&nbsp;&nbsp;- Refatoração de código complexo visando melhorar a performance.
-                <br><br>ECOSSISTEMA DE TECNOLOGIAS:
-                <br>&nbsp;&nbsp;&nbsp;&nbsp;- Spring Framework, Rest API, Webservices, JasperReports, Maven, Java Enterprise Edition (Java EE), Java Standard Edition (Java SE), Hibernate, JPA, HTML, CSS, Javascript, jQuery, Bootstrap, Weblogic, Tomcat, Jira, IntelliJ IDEA, SQLDeveloper, DBeaver, GIT, Oracle, SQL Server, Orientação a Objetos, Design Patterns.
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">NOC - Made4IT</h4>
-
-              <span>06/2020 - 03/2021</span>
-
-              <p class="timeline-text">
-                Suporte ao usuário e monitoramento de infraestrutura de provedores de internet.
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Engenheiro de Software Fullstack - RL Software de Gestão</h4>
-
-              <span>08/2019 - 06/2020</span>
-
-              <p class="timeline-text">
-                Sustentação e desenvolvimento de novas funcionalidades em aplicações ERP e PDV, utilizando Delphi.
-                <br>Modelagem e consulta em banco de dados Firebird
-              </p>
-
-            </li>
-
-          </ol>
-
-        </section>
-
-        <section class="skill">
-
-          <h3 class="h3 skills-title">Habilidades</h3>
-
-          <ul class="skills-list content-card">
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Java</h5>
-                <data value="80">80%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 80%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">SQL</h5>
-                <data value="70">70%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 70%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">AngularJS</h5>
-                <data value="40">40%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 40%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">versionamento de código</h5>
-                <data value="80">80%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 80%;"></div>
-              </div>
-
-            </li>
-
-          </ul>
-
-        </section>
-
-      </article>
-
-
-
-
-
-      <!--
-        - #PORTFÓLIO
-      -->
-
-      <article class="portfólio" data-page="portfólio">
-
-        <header>
-          <h2 class="h2 article-title">Portfólio</h2>
-        </header>
-
-        <section class="projects">
-
-          <ul class="filter-list">
-
-            <li class="filter-item">
-              <button class="active" data-filter-btn>Todos</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Plugin para navegador</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Programas</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Desenvolvimento Web</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Mobile</button>
-            </li>
-
-          </ul>
-
-          <div class="filter-select-box">
-
-            <button class="filter-select" data-select>
-
-              <div class="select-value" data-selecct-value>Selecione a categoria</div>
-
-              <div class="select-icon">
-                <ion-icon name="chevron-down"></ion-icon>
-              </div>
-
-            </button>
-
-            <ul class="select-list">
-
-              <li class="select-item">
-                <button data-select-item>Todos</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Plugin para navegador</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Programas</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Desenvolvimento Web</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Mobile</button>
-              </li>
-
-            </ul>
-
-          </div>
-
-          <ul class="project-list">
-
-            <li class="project-item  active" data-filter-item data-category="programas">
-              <a href="tcc.html" target="_blank">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/logos-projetos/capa-tcc.png" alt="fundo" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">TCC</h3>
-
-                <p class="project-category">Programas</p>
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="desenvolvimento web">
-              <a href="projeto-diasnogueira.html" target="_blank">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/logos-projetos/diasnogueira.png" alt="fundo" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Dias e Nogueira</h3>
-
-                <p class="project-category">Desenvolvimento Web</p>
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="mobile">
-              <a href="projeto-ditalia.html" target="_blank">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/logos-projetos/projeto-ditalia.png" alt="fundo" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Delivery Pizzaria D'Italia</h3>
-
-                <p class="project-category">Mobile</p>
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="plugin para navegador">
-              <a href="generator-password.html" target="_blank">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/logos-projetos/generatorPassaword.png" alt="finance" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">GeneratorPassword</h3>
-
-                <p class="project-category">Plugin para navegador</p>
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="desenvolvimento web">
-              <a href="readme-github.html" target="_blank">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/logos-projetos/readme-github.png" alt="fundo" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Readme para GitHub</h3>
-
-                <p class="project-category">Desenvolvimento Web</p>
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="programas">
-              <a href="busca-cep.html" target="_blank">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/logos-projetos/consulta-cep.png" alt="orizon" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Busca CEP</h3>
-
-                <p class="project-category">Programas</p>
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="programas">
-              <a href="computacao-grafica.html" target="_blank">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/logos-projetos/computacao-grafica.png" alt="fundo" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Computação Gráfica</h3>
-
-                <p class="project-category">Programas</p>
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="programas">
-              <a href="exercicios-java.html" target="_blank">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/logos-projetos/logoJava.png" alt="fundo" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Exercícios em Java</h3>
-
-                <p class="project-category">Programas</p>
-              </a>
-            </li>
-
-          </ul>
-
-        </section>
-
-      </article>
-
-
-      <!--
-        - #BLOG
-      -->
-
-      <article class="blog" data-page="blog">
-
-        <header>
-          <h2 class="h2 article-title">Blog</h2>
-        </header>
-
-        <section class="blog-posts">
-
-          <ul class="blog-posts-list">
-
-            <li class="blog-post-item">
-              <a href="https://medium.com/@matheus787/java-para-iniciantes-64e082ad9d53" target="_blank">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/capas-blog/capaLivro.png" alt="Java para iniciantes" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Java</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Mar 23, 2023</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Java para iniciantes</h3>
-
-                  <p class="blog-text">
-                    Apresentação do perfil no Medium
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="https://medium.com/@matheus787/resumo-das-versões-até-o-java-se-8-806f626899e2" target="_blank">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/capas-blog/capaLivro.png" alt="Best fonts every designer" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Java</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Mar 23, 2023</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Resumo das versões Java até o Java SE 8</h3>
-
-                  <p class="blog-text">
-                    Um breve resumo das versões do Java até chegar na versão 8, baseado no livro Java para iniciantes 6° edição.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-            
-          </ul>
-
-        </section>
-
-      </article>
-
-
-
-
-
-      <!--
-        - #CONTACT
-      -->
-
-      <article class="contato" data-page="contato">
-
-        <header>
-          <h2 class="h2 article-title">Contato</h2>
-        </header>
-
-        <section class="mapbox" data-mapbox>
-          <figure>
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3714255.2424995364!2d-51.32142114999999!3d-24.616708550000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94db0b9430b8629d%3A0xe893fd5063cef061!2zUGFyYW7DoQ!5e0!3m2!1spt-BR!2sbr!4v1679613721569!5m2!1spt-BR!2sbr"
-              width="400" height="300" loading="lazy"></iframe>
-          </figure>
-        </section>
-
-        <section class="contact-form">
-
-          <h3 class="h3 form-title">Form para contato</h3>
-
-          <form action="#" class="form" data-form>
-
-            <div class="input-wrapper">
-              <input type="text" name="fullname" class="form-input" placeholder="Nome completo" required data-form-input>
-
-              <input type="email" name="email" class="form-input" placeholder="Endereço de email" required data-form-input>
-            </div>
-
-            <textarea name="message" class="form-input" placeholder="Função de enviar email desativada por não possuir servidor SMTP
-              Para entrar em contato, envie email para matheus787@hotmail.com" required data-form-input></textarea>
-
-            <button class="form-btn" type="submit" disabled>
-              <ion-icon name="paper-plane"></ion-icon>
-              <span>Enviar mensagem</span>
-            </button>
-
-          </form>
-
-        </section>
-
-      </article>
+      <div class="controls">
+        <button class="ctl" type="button" data-lang-toggle
+          data-i18n-attr="aria-label" data-aria-label-pt="Switch to English" data-aria-label-en="Mudar para português">
+          <span class="opt opt-pt">pt</span>|<span class="opt opt-en">en</span>
+        </button>
+        <button class="ctl" type="button" data-theme-toggle
+          data-i18n-attr="aria-label" data-aria-label-pt="Tema escuro" data-aria-label-en="Dark theme">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        </button>
+      </div>
 
     </div>
+  </header>
+
+
+
+  <main class="wrap" id="top">
+
+    <!--
+      - #HERO
+    -->
+
+    <section class="bento" aria-label="Perfil">
+
+      <div class="card intro">
+        <div>
+          <p class="label"><span lang="pt-BR">olá, eu sou</span><span lang="en">hi, i'm</span></p>
+          <h1>Matheus Souza<span aria-hidden="true">_</span></h1>
+          <p class="role"><span lang="pt-BR">Engenheiro de Software</span><span lang="en">Software Engineer</span></p>
+
+          <p class="summary" lang="pt-BR">
+            Atuo como desenvolvedor desde 2019 e já participei de projetos de grandes empresas como Petrobras, Oi, Bradesco e BRB.
+            Hoje sou líder da equipe e referência técnica do backend do aplicativo de financiamento imobiliário do banco em que estou alocado.
+          </p>
+          <p class="summary" lang="en">
+            I've been working as a developer since 2019, on projects for large companies such as Petrobras, Oi, Bradesco and BRB.
+            Today I lead the team and am the technical reference for the backend of the home financing app at the bank I'm allocated to.
+          </p>
+        </div>
+
+        <div class="actions">
+          <a class="btn primary" href="./assets/pdf/curriculo.pdf" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0-4-4m4 4 4-4M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
+            <span lang="pt-BR">currículo.pdf</span><span lang="en">résumé.pdf (PT-BR)</span>
+          </a>
+          <a class="btn" href="#contato"><span lang="pt-BR">entrar em contato</span><span lang="en">get in touch</span></a>
+        </div>
+      </div>
+
+      <figure class="card avatar">
+        <img src="./assets/images/perfil.jpeg" alt="Matheus Souza" width="1200" height="1500">
+        <figcaption class="status">Paraná, Brasil</figcaption>
+      </figure>
+
+      <div class="card stack">
+        <p class="label">stack</p>
+        <ul class="chips">
+          <li class="chip">Java 8/11/17</li>
+          <li class="chip">Spring</li>
+          <li class="chip"><span lang="pt-BR">Microsserviços</span><span lang="en">Microservices</span></li>
+          <li class="chip">REST APIs</li>
+          <li class="chip">AWS</li>
+          <li class="chip">Docker</li>
+          <li class="chip">OpenShift</li>
+          <li class="chip">Oracle</li>
+          <li class="chip">Redis</li>
+          <li class="chip">JUnit</li>
+          <li class="chip">Mockito</li>
+          <li class="chip">Git</li>
+          <li class="chip">Scrum</li>
+        </ul>
+      </div>
+
+      <div class="card edu">
+        <p class="label"><span lang="pt-BR">formação</span><span lang="en">education</span></p>
+        <ul>
+          <li>
+            <div>
+              <strong><span lang="pt-BR">Mestrado</span><span lang="en">Master's degree</span></strong>
+              <span class="inst">UTFPR</span>
+            </div>
+            <small>2026—2028</small>
+          </li>
+          <li>
+            <div>
+              <strong><span lang="pt-BR">Pós-graduação em Arquitetura de Software</span><span lang="en">Postgraduate in Software Architecture</span></strong>
+              <span class="inst">FACUVALE</span>
+            </div>
+            <small>2024</small>
+          </li>
+          <li>
+            <div>
+              <strong><span lang="pt-BR">Pós-graduação em Inteligência Artificial</span><span lang="en">Postgraduate in Artificial Intelligence</span></strong>
+              <span class="inst">FACUVALE</span>
+            </div>
+            <small>2024</small>
+          </li>
+          <li>
+            <div>
+              <strong><span lang="pt-BR">Pós-graduação em Cloud Computing</span><span lang="en">Postgraduate in Cloud Computing</span></strong>
+              <span class="inst">FACUVALE</span>
+            </div>
+            <small>2024</small>
+          </li>
+          <li>
+            <div>
+              <strong><span lang="pt-BR">Especialização em Java</span><span lang="en">Specialization in Java</span></strong>
+              <span class="inst">UTFPR</span>
+            </div>
+            <small>2022—2023</small>
+          </li>
+          <li>
+            <div>
+              <strong><span lang="pt-BR">Bacharelado em Ciência da Computação</span><span lang="en">B.Sc. in Computer Science</span></strong>
+              <span class="inst">Unespar</span>
+              <a class="edu-link" href="./tcc.html"><span lang="pt-BR">TCC: reconhecimento de placas de veículos</span><span lang="en">Thesis: vehicle license plate recognition</span> →</a>
+            </div>
+            <small>2016—2021</small>
+          </li>
+        </ul>
+      </div>
+
+      <div class="card langs">
+        <p class="label"><span lang="pt-BR">idiomas</span><span lang="en">languages</span></p>
+        <ul class="chips">
+          <li class="chip"><span lang="pt-BR">Português</span><span lang="en">Portuguese</span></li>
+          <li class="chip"><span lang="pt-BR">Inglês</span><span lang="en">English</span></li>
+          <li class="chip"><span lang="pt-BR">Espanhol</span><span lang="en">Spanish</span></li>
+        </ul>
+      </div>
+
+      <div class="card socials">
+        <p class="label">links</p>
+        <ul class="social-links">
+          <li>
+            <a href="https://www.linkedin.com/in/math787/" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+              LinkedIn
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/Matheuscs787" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.38c.6.12.83-.26.83-.57v-2.04c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.8 5.62-5.48 5.92.42.36.81 1.1.81 2.22v3.29c0 .32.21.69.82.57A12 12 0 0 0 12 .3"/></svg>
+              GitHub
+            </a>
+          </li>
+          <li>
+            <a href="https://medium.com/@matheus787" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.54 12a6.8 6.8 0 0 1-6.77 6.82A6.8 6.8 0 0 1 0 12a6.8 6.8 0 0 1 6.77-6.82A6.8 6.8 0 0 1 13.54 12zm7.42 0c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/></svg>
+              Medium
+            </a>
+          </li>
+          <li>
+            <a href="mailto:matheus787@hotmail.com">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+              matheus787@hotmail.com
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </section>
+
+
+
+    <!--
+      - #EXPERIENCE
+    -->
+
+    <section id="experiencia">
+
+      <h2 class="sec-title"><b>01</b> <span lang="pt-BR">experiência</span><span lang="en">experience</span></h2>
+
+      <ol class="jobs">
+
+        <li class="job card is-current">
+          <header class="job-head">
+            <div>
+              <span class="co">Fóton</span>
+              <span class="now"><span lang="pt-BR">atual</span><span lang="en">current</span></span>
+              <h3><span lang="pt-BR">Engenheiro de Software</span><span lang="en">Software Engineer</span></h3>
+            </div>
+            <div class="job-when">
+              <time>09/2024 → <span lang="pt-BR">atual</span><span lang="en">present</span></time>
+              <span class="dur" data-from="2024-09" data-to=""></span>
+            </div>
+          </header>
+          <p class="job-summary" lang="pt-BR">Responsável pelo desenvolvimento backend do aplicativo de financiamento imobiliário de um grande banco.</p>
+          <p class="job-summary" lang="en">Responsible for backend development of a major bank's home financing app.</p>
+          <div class="job-body two">
+            <div>
+              <p class="label"><span lang="pt-BR">principais atividades</span><span lang="en">key responsibilities</span></p>
+              <ul class="bullets">
+                <li><span lang="pt-BR">Projeto e desenvolvo microsserviços em Java e Spring, integrados via IBM ACE e API Gateway, com deploy em OpenShift.</span><span lang="en">Design and build Java and Spring microservices, integrated through IBM ACE and API Gateway and deployed on OpenShift.</span></li>
+                <li><span lang="pt-BR">Otimizei endpoints críticos, reduzindo o tempo de resposta em até 10x com refatoração direcionada e ajuste de performance.</span><span lang="en">Optimized critical endpoints, cutting response times by up to 10x through targeted refactoring and performance tuning.</span></li>
+                <li><span lang="pt-BR">Sou líder da equipe e principal referência técnica do sistema, além de referência de negócio para os desenvolvedores: fui o primeiro engenheiro alocado no projeto e acompanhei o crescimento do time.</span><span lang="en">Team lead and main technical reference for the system, as well as the business reference for the developers: first engineer on the project, I've supported the team as it grew.</span></li>
+                <li><span lang="pt-BR">Conduzi treinamentos sobre a arquitetura e as regras de negócio do sistema, acelerando a integração de novos desenvolvedores ao time.</span><span lang="en">Ran training on the system's architecture and business rules, speeding up onboarding of new developers.</span></li>
+                <li><span lang="pt-BR">Conduzo levantamento de requisitos, escrevo especificações técnicas, proponho soluções e entrego novos módulos. Também diagnostico e corrijo problemas em produção num ambiente bancário de alta disponibilidade.</span><span lang="en">Lead requirements gathering, write technical specifications, design solutions and deliver new modules, and diagnose and fix production issues in a high-availability banking environment.</span></li>
+              </ul>
+              <p class="label"><span lang="pt-BR">iniciativas</span><span lang="en">initiatives</span></p>
+              <ul class="bullets">
+                <li><span lang="pt-BR"><strong>Agente de base de conhecimento com IA</strong> (Spring Boot + Gemini CLI + Obsidian), com interface no navegador, para o time consultar em linguagem natural a documentação dos microsserviços e dos fluxos IBM ACE.</span><span lang="en"><strong>AI knowledge-base agent</strong> (Spring Boot + Gemini CLI + Obsidian) with a browser interface, letting the team query microservice docs and IBM ACE flows in natural language.</span></li>
+                <li><span lang="pt-BR"><strong>Contract Builder:</strong> CLI em Python que gera contratos YAML a partir de specs OpenAPI/Swagger, para padronizar o desenvolvimento orientado a contrato.</span><span lang="en"><strong>Contract Builder:</strong> a Python CLI that generates YAML contracts from OpenAPI/Swagger specs to standardize contract-first development.</span></li>
+              </ul>
+            </div>
+            <div class="job-tech">
+              <p class="label"><span lang="pt-BR">tecnologias</span><span lang="en">technologies</span></p>
+              <ul class="chips">
+                <li class="chip">Java 11/17</li>
+                <li class="chip">Spring</li>
+                <li class="chip"><span lang="pt-BR">Microsserviços</span><span lang="en">Microservices</span></li>
+                <li class="chip">IBM ACE</li>
+                <li class="chip">API Gateway</li>
+                <li class="chip">OpenShift</li>
+                <li class="chip">Oracle</li>
+                <li class="chip">JasperReports</li>
+                <li class="chip">Redis</li>
+                <li class="chip">AWS S3</li>
+                <li class="chip">Graylog</li>
+                <li class="chip">Docker</li>
+                <li class="chip">JUnit/Mockito</li>
+                <li class="chip">Git</li>
+                <li class="chip">Scrum</li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <li class="job card">
+          <header class="job-head">
+            <div>
+              <span class="co">Ebix</span>
+              <h3><span lang="pt-BR">Engenheiro de Software</span><span lang="en">Software Engineer</span></h3>
+            </div>
+            <div class="job-when">
+              <time>08/2022 → 09/2024</time>
+              <span class="dur" data-from="2022-08" data-to="2024-09"></span>
+            </div>
+          </header>
+          <p class="job-summary" lang="pt-BR">Analista desenvolvedor em projetos de software de grande porte para a vertical de Seguros da Ebix.</p>
+          <p class="job-summary" lang="en">Developer analyst on large-scale software projects for Ebix's Insurance vertical.</p>
+          <div class="job-body two">
+            <div>
+              <p class="label"><span lang="pt-BR">principais atividades</span><span lang="en">key responsibilities</span></p>
+              <ul class="bullets">
+                <li><span lang="pt-BR">Integração dos sistemas com mainframe.</span><span lang="en">Integrating the systems with a mainframe.</span></li>
+                <li><span lang="pt-BR">Levantamento de requisitos, proposta de solução e desenvolvimento de novos módulos para evolução dos sistemas.</span><span lang="en">Requirements gathering, solution design and development of new modules to evolve the systems.</span></li>
+                <li><span lang="pt-BR">Análise e correção de problemas ocorridos em ambiente produtivo.</span><span lang="en">Analysis and fixing of issues in production.</span></li>
+                <li><span lang="pt-BR">Refatoração de código complexo visando melhorar a performance.</span><span lang="en">Refactoring complex code to improve performance.</span></li>
+              </ul>
+            </div>
+            <div class="job-tech">
+              <p class="label"><span lang="pt-BR">tecnologias</span><span lang="en">technologies</span></p>
+              <ul class="chips">
+                <li class="chip">Java 7</li>
+                <li class="chip">Oracle</li>
+                <li class="chip">DB2</li>
+                <li class="chip">SVN</li>
+                <li class="chip">Scrum</li>
+              </ul>
+              <p class="label"><span lang="pt-BR">ecossistema</span><span lang="en">ecosystem</span></p>
+              <ul class="chips eco">
+                <li class="chip sm">Spring Framework</li>
+                <li class="chip sm">JasperReports</li>
+                <li class="chip sm">Maven</li>
+                <li class="chip sm">Java EE</li>
+                <li class="chip sm">Java SE</li>
+                <li class="chip sm">Struts</li>
+                <li class="chip sm">WebSphere</li>
+                <li class="chip sm">Tomcat</li>
+                <li class="chip sm">Webservices</li>
+                <li class="chip sm">REST API</li>
+                <li class="chip sm">SOAP API</li>
+                <li class="chip sm">Jira</li>
+                <li class="chip sm">DBeaver</li>
+                <li class="chip sm"><span lang="pt-BR">Orientação a Objetos</span><span lang="en">Object-Oriented Programming</span></li>
+                <li class="chip sm"><span lang="pt-BR">Design Patterns</span><span lang="en">Design Patterns</span></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <li class="job card">
+          <header class="job-head">
+            <div>
+              <span class="co">Accenture</span>
+              <h3><span lang="pt-BR">Engenheiro de Software</span><span lang="en">Software Engineer</span></h3>
+            </div>
+            <div class="job-when">
+              <time>03/2022 → 08/2022</time>
+              <span class="dur" data-from="2022-03" data-to="2022-08"></span>
+            </div>
+          </header>
+          <p class="job-summary" lang="pt-BR">Analista desenvolvedor em projetos de software de grande porte para a vertical de Telefonia da Accenture, atuando na unificação de dois sistemas diferentes.</p>
+          <p class="job-summary" lang="en">Developer analyst on large-scale software projects for Accenture's Telecom vertical, working on unifying two different systems.</p>
+          <div class="job-body two">
+            <div>
+              <p class="label"><span lang="pt-BR">principais atividades</span><span lang="en">key responsibilities</span></p>
+              <ul class="bullets">
+                <li><span lang="pt-BR">Levantamento de requisitos, proposta de solução e desenvolvimento de novos módulos para evolução dos sistemas.</span><span lang="en">Requirements gathering, solution design and development of new modules to evolve the systems.</span></li>
+                <li><span lang="pt-BR">Análise e correção de problemas ocorridos em ambiente produtivo.</span><span lang="en">Analysis and fixing of issues in production.</span></li>
+                <li><span lang="pt-BR">Refatoração de código complexo visando melhorar a performance.</span><span lang="en">Refactoring complex code to improve performance.</span></li>
+              </ul>
+            </div>
+            <div class="job-tech">
+              <p class="label"><span lang="pt-BR">tecnologias</span><span lang="en">technologies</span></p>
+              <ul class="chips">
+                <li class="chip">Java 7</li>
+                <li class="chip">JSF</li>
+                <li class="chip">Oracle</li>
+                <li class="chip">Git</li>
+                <li class="chip">Scrum</li>
+              </ul>
+              <p class="label"><span lang="pt-BR">ecossistema</span><span lang="en">ecosystem</span></p>
+              <ul class="chips eco">
+                <li class="chip sm">Spring Framework</li>
+                <li class="chip sm">Hibernate</li>
+                <li class="chip sm">JPA</li>
+                <li class="chip sm">JasperReports</li>
+                <li class="chip sm">Maven</li>
+                <li class="chip sm">Java EE</li>
+                <li class="chip sm">Java SE</li>
+                <li class="chip sm">Tomcat</li>
+                <li class="chip sm">HTML</li>
+                <li class="chip sm">CSS</li>
+                <li class="chip sm">Jira</li>
+                <li class="chip sm">DBeaver</li>
+                <li class="chip sm"><span lang="pt-BR">Orientação a Objetos</span><span lang="en">Object-Oriented Programming</span></li>
+                <li class="chip sm"><span lang="pt-BR">Design Patterns</span><span lang="en">Design Patterns</span></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <li class="job card">
+          <header class="job-head">
+            <div>
+              <span class="co">TCS</span>
+              <h3>Trainee</h3>
+            </div>
+            <div class="job-when">
+              <time>03/2021 → 03/2022</time>
+              <span class="dur" data-from="2021-03" data-to="2022-03"></span>
+            </div>
+          </header>
+          <p class="job-summary" lang="pt-BR">Analista desenvolvedor em projetos de software de grande porte para a vertical de Energia da TCS.</p>
+          <p class="job-summary" lang="en">Developer analyst on large-scale software projects for TCS's Energy vertical.</p>
+          <div class="job-body two">
+            <div>
+              <p class="label"><span lang="pt-BR">principais atividades</span><span lang="en">key responsibilities</span></p>
+              <ul class="bullets">
+                <li><span lang="pt-BR">Levantamento de requisitos, proposta de solução e desenvolvimento de novos módulos para evolução dos sistemas.</span><span lang="en">Requirements gathering, solution design and development of new modules to evolve the systems.</span></li>
+                <li><span lang="pt-BR">Análise e correção de problemas ocorridos em ambiente produtivo.</span><span lang="en">Analysis and fixing of issues in production.</span></li>
+                <li><span lang="pt-BR">Refatoração de código complexo visando melhorar a performance.</span><span lang="en">Refactoring complex code to improve performance.</span></li>
+              </ul>
+            </div>
+            <div class="job-tech">
+              <p class="label"><span lang="pt-BR">tecnologias</span><span lang="en">technologies</span></p>
+              <ul class="chips">
+                <li class="chip">Java 7/8/11</li>
+                <li class="chip">Angular</li>
+                <li class="chip">Oracle</li>
+                <li class="chip">Git</li>
+                <li class="chip">SVN</li>
+                <li class="chip">RTC</li>
+                <li class="chip">Scrum</li>
+              </ul>
+              <p class="label"><span lang="pt-BR">ecossistema</span><span lang="en">ecosystem</span></p>
+              <ul class="chips eco">
+                <li class="chip sm">Spring Framework</li>
+                <li class="chip sm">REST API</li>
+                <li class="chip sm">Webservices</li>
+                <li class="chip sm">Hibernate</li>
+                <li class="chip sm">JPA</li>
+                <li class="chip sm">JasperReports</li>
+                <li class="chip sm">Maven</li>
+                <li class="chip sm">Java EE</li>
+                <li class="chip sm">Java SE</li>
+                <li class="chip sm">WebLogic</li>
+                <li class="chip sm">Tomcat</li>
+                <li class="chip sm">SQL Server</li>
+                <li class="chip sm">HTML</li>
+                <li class="chip sm">CSS</li>
+                <li class="chip sm">JavaScript</li>
+                <li class="chip sm">jQuery</li>
+                <li class="chip sm">Bootstrap</li>
+                <li class="chip sm">Jira</li>
+                <li class="chip sm">IntelliJ IDEA</li>
+                <li class="chip sm">SQL Developer</li>
+                <li class="chip sm">DBeaver</li>
+                <li class="chip sm"><span lang="pt-BR">Orientação a Objetos</span><span lang="en">Object-Oriented Programming</span></li>
+                <li class="chip sm"><span lang="pt-BR">Design Patterns</span><span lang="en">Design Patterns</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="award">
+            <p class="label"><span lang="pt-BR">reconhecimento</span><span lang="en">recognition</span></p>
+            <div class="award-row">
+              <a class="award-img" href="./assets/images/tcs-on-the-spot-award.jpeg" target="_blank" rel="noopener"
+                data-i18n-attr="aria-label" data-aria-label-pt="Ver certificado em tamanho real" data-aria-label-en="View full-size certificate">
+                <img src="./assets/images/tcs-on-the-spot-award.jpeg" alt="Certificado On the Spot (Team) Award — TCS Gems" width="1080" height="725" loading="lazy"
+                  data-i18n-attr="alt" data-alt-pt="Certificado On the Spot (Team) Award — TCS Gems" data-alt-en="On the Spot (Team) Award certificate — TCS Gems">
+              </a>
+              <div>
+                <h4>On the Spot (Team) Award</h4>
+                <p class="award-meta">TCS Gems · 10/2021</p>
+                <p lang="pt-BR">Prêmio concedido pela TCS em reconhecimento à contribuição, ao apoio e ao comprometimento.</p>
+                <p lang="en">Awarded by TCS in appreciation of contribution, support and commitment.</p>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="job card">
+          <header class="job-head">
+            <div>
+              <span class="co">Made4IT</span>
+              <h3>NOC</h3>
+            </div>
+            <div class="job-when">
+              <time>06/2020 → 03/2021</time>
+              <span class="dur" data-from="2020-06" data-to="2021-03"></span>
+            </div>
+          </header>
+          <p class="job-summary" lang="pt-BR">Suporte ao usuário e monitoramento de infraestrutura de provedores de internet.</p>
+          <p class="job-summary" lang="en">User support and infrastructure monitoring for internet service providers.</p>
+        </li>
+
+        <li class="job card">
+          <header class="job-head">
+            <div>
+              <span class="co">RL Software de Gestão</span>
+              <h3><span lang="pt-BR">Engenheiro de Software</span><span lang="en">Software Engineer</span></h3>
+            </div>
+            <div class="job-when">
+              <time>08/2019 → 06/2020</time>
+              <span class="dur" data-from="2019-08" data-to="2020-06"></span>
+            </div>
+          </header>
+          <p class="job-summary" lang="pt-BR">Sustentação e desenvolvimento de novas funcionalidades em aplicações ERP e PDV, com modelagem e consultas em banco de dados Firebird.</p>
+          <p class="job-summary" lang="en">Maintenance and development of new features for ERP and point-of-sale applications, including Firebird database modeling and queries.</p>
+          <div class="job-body">
+            <div class="job-tech">
+              <p class="label"><span lang="pt-BR">tecnologias</span><span lang="en">technologies</span></p>
+              <ul class="chips">
+                <li class="chip">Delphi</li>
+                <li class="chip">Firebird</li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+      </ol>
+
+    </section>
+
+
+
+    <!--
+      - #CERTIFICATIONS
+    -->
+
+    <section id="certificacoes">
+
+      <h2 class="sec-title"><b>02</b> <span lang="pt-BR">certificações</span><span lang="en">certifications</span></h2>
+
+      <ul class="certs">
+
+        <li class="card cert">
+          <img class="cert-badge" src="https://images.credly.com/size/160x160/images/4d4693bb-530e-4bca-9327-de07f3aa2348/image.png" alt="" width="80" height="80" loading="lazy">
+          <div>
+            <h3>AWS Certified AI Practitioner</h3>
+            <p>Amazon Web Services</p>
+            <p><span lang="pt-BR">emitida em 09/2026 · válida até 09/2029</span><span lang="en">issued 09/2026 · expires 09/2029</span></p>
+            <a class="cert-link" href="https://www.credly.com/badges/8004c081-c8b8-4b1c-aacb-1e853d249869/public_url" target="_blank" rel="noopener"><span lang="pt-BR">verificar no Credly</span><span lang="en">verify on Credly</span> ↗</a>
+          </div>
+        </li>
+
+      </ul>
+
+    </section>
+
+
+
+    <!--
+      - #BLOG
+    -->
+
+    <section id="blog">
+
+      <h2 class="sec-title"><b>03</b> blog</h2>
+
+      <p class="sec-note" lang="en">Articles written in Portuguese.</p>
+
+      <div class="card posts">
+
+        <a class="post" href="https://medium.com/@matheus787/o-que-%C3%A9-o-modelo-de-maturidade-de-richardson-parte-1-6356da048dc1" target="_blank" rel="noopener">
+          <div>
+            <p class="post-meta"><time datetime="2024-08-28">08/2024</time></p>
+            <h3>O que é o modelo de maturidade de Richardson? Parte 1</h3>
+            <p lang="pt-BR">Introdução a APIs e protocolos de comunicação (REST, SOAP e GraphQL) como base para entender o modelo de maturidade de Richardson.</p>
+            <p lang="en">An introduction to APIs and communication protocols (REST, SOAP and GraphQL) as the groundwork for Richardson's maturity model.</p>
+            <ul class="chips"><li class="chip sm">api</li><li class="chip sm">rest</li></ul>
+          </div>
+          <span class="arrow" aria-hidden="true">↗</span>
+        </a>
+
+        <a class="post" href="https://medium.com/@matheus787/como-atualizar-a-hora-do-servidor-e-do-container-docker-038b4e47468a" target="_blank" rel="noopener">
+          <div>
+            <p class="post-meta"><time datetime="2024-08-01">08/2024</time></p>
+            <h3>Como atualizar a hora do servidor e do container Docker</h3>
+            <p lang="pt-BR">Como sincronizar o horário entre o servidor e os containers Docker.</p>
+            <p lang="en">How to keep the time in sync between a server and its Docker containers.</p>
+            <ul class="chips"><li class="chip sm">docker</li><li class="chip sm">debian</li></ul>
+          </div>
+          <span class="arrow" aria-hidden="true">↗</span>
+        </a>
+
+        <a class="post" href="https://medium.com/@matheus787/documentando-suas-apis-usando-o-swagger-680965f12163" target="_blank" rel="noopener">
+          <div>
+            <p class="post-meta"><time datetime="2024-07-28">07/2024</time></p>
+            <h3>Documentando suas APIs usando o Swagger</h3>
+            <p lang="pt-BR">Como gerar automaticamente a documentação de APIs com Swagger em projetos Spring Boot.</p>
+            <p lang="en">Generating API documentation automatically with Swagger in Spring Boot projects.</p>
+            <ul class="chips"><li class="chip sm">java</li><li class="chip sm">spring boot</li><li class="chip sm">swagger</li></ul>
+          </div>
+          <span class="arrow" aria-hidden="true">↗</span>
+        </a>
+
+        <a class="post" href="https://medium.com/@matheus787/como-criar-vari%C3%A1vel-de-ambiente-no-mac-82ddc6eac551" target="_blank" rel="noopener">
+          <div>
+            <p class="post-meta"><time datetime="2024-07-28">07/2024</time></p>
+            <h3>Como criar variável de ambiente no Mac</h3>
+            <p lang="pt-BR">Como criar variáveis de ambiente no Mac, com as diferenças entre processadores M1 e Intel.</p>
+            <p lang="en">Creating environment variables on a Mac, covering the differences between M1 and Intel machines.</p>
+            <ul class="chips"><li class="chip sm">mac</li></ul>
+          </div>
+          <span class="arrow" aria-hidden="true">↗</span>
+        </a>
+
+        <a class="post" href="https://medium.com/@matheus787/java-para-iniciantes-64e082ad9d53" target="_blank" rel="noopener">
+          <div>
+            <p class="post-meta"><time datetime="2023-03-23">03/2023</time></p>
+            <h3>Java para iniciantes</h3>
+            <p lang="pt-BR">Apresentação da série de estudos baseada no livro Java para Iniciantes, com foco no Java SE 8.</p>
+            <p lang="en">Introduction to my study series based on the book Java: A Beginner's Guide, focused on Java SE 8.</p>
+            <ul class="chips"><li class="chip sm">java</li></ul>
+          </div>
+          <span class="arrow" aria-hidden="true">↗</span>
+        </a>
+
+        <a class="post" href="https://medium.com/@matheus787/resumo-das-vers%C3%B5es-at%C3%A9-o-java-se-8-806f626899e2" target="_blank" rel="noopener">
+          <div>
+            <p class="post-meta"><time datetime="2023-03-23">03/2023</time></p>
+            <h3>Resumo das versões até o Java SE 8</h3>
+            <p lang="pt-BR">Um breve resumo das versões do Java, da 1.0 até a SE 8, com os principais recursos de cada uma.</p>
+            <p lang="en">A short history of Java versions from 1.0 to SE 8 and the main features of each.</p>
+            <ul class="chips"><li class="chip sm">java</li></ul>
+          </div>
+          <span class="arrow" aria-hidden="true">↗</span>
+        </a>
+
+      </div>
+
+    </section>
+
+
+
+    <!--
+      - #CONTACT
+    -->
+
+    <section id="contato">
+
+      <h2 class="sec-title"><b>04</b> <span lang="pt-BR">contato</span><span lang="en">contact</span></h2>
+
+      <div class="card contact">
+        <div>
+          <h2><span lang="pt-BR">Vamos conversar?</span><span lang="en">Let's talk?</span></h2>
+          <p class="mono">matheus787@hotmail.com</p>
+        </div>
+        <div class="actions">
+          <a class="btn primary" href="mailto:matheus787@hotmail.com">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+            <span lang="pt-BR">enviar email</span><span lang="en">send email</span>
+          </a>
+          <a class="btn" href="https://www.linkedin.com/in/math787/" target="_blank" rel="noopener">LinkedIn ↗</a>
+        </div>
+      </div>
+
+    </section>
 
   </main>
 
 
 
+  <footer class="wrap site-footer">
+    <span>© <span data-year>2026</span> Matheus Souza</span>
+  </footer>
 
-
-
-  <!--
-    - custom js link
-  -->
   <script src="./assets/js/script.js"></script>
-
-  <!--
-    - ionicon link
-  -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 </body>
 

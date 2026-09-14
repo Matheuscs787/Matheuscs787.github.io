@@ -1,124 +1,109 @@
 'use strict';
 
+const root = document.documentElement;
+
+const store = {
+  get(key) { try { return localStorage.getItem(key); } catch (e) { return null; } },
+  set(key, value) { try { localStorage.setItem(key, value); } catch (e) { /* storage unavailable */ } }
+};
 
 
-// element toggle function
-const elementToggleFunc = function (elem) { elem.classList.toggle("active"); }
+
+/*-----------------------------------*\
+  #THEME
+\*-----------------------------------*/
+
+const themeToggles = document.querySelectorAll('[data-theme-toggle]');
+
+const applyTheme = function (theme) {
+  root.setAttribute('data-theme', theme);
+  themeToggles.forEach(btn => btn.setAttribute('aria-pressed', String(theme === 'dark')));
+};
+
+themeToggles.forEach(btn => btn.addEventListener('click', function () {
+  const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+  store.set('theme', next);
+  applyTheme(next);
+}));
+
+// follow system changes while the visitor hasn't picked a theme
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function (e) {
+  if (!store.get('theme')) applyTheme(e.matches ? 'dark' : 'light');
+});
+
+applyTheme(root.getAttribute('data-theme') || 'light');
 
 
 
-// sidebar variables
-const sidebar = document.querySelector("[data-sidebar]");
-const sidebarBtn = document.querySelector("[data-sidebar-btn]");
+/*-----------------------------------*\
+  #LANGUAGE
+\*-----------------------------------*/
 
-// sidebar toggle functionality for mobile
-sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); });
+const langToggles = document.querySelectorAll('[data-lang-toggle]');
 
+const applyLang = function (lang) {
+  root.setAttribute('data-lang', lang);
+  root.setAttribute('lang', lang === 'pt' ? 'pt-BR' : 'en');
 
-// modal variable
-const modalImg = document.querySelector("[data-modal-img]");
-const modalTitle = document.querySelector("[data-modal-title]");
-const modalText = document.querySelector("[data-modal-text]");
+  const title = root.getAttribute('data-title-' + lang);
+  if (title) document.title = title;
 
-// custom select variables
-const select = document.querySelector("[data-select]");
-const selectItems = document.querySelectorAll("[data-select-item]");
-const selectValue = document.querySelector("[data-selecct-value]");
-const filterBtn = document.querySelectorAll("[data-filter-btn]");
-
-select.addEventListener("click", function () { elementToggleFunc(this); });
-
-// add event in all select items
-for (let i = 0; i < selectItems.length; i++) {
-  selectItems[i].addEventListener("click", function () {
-
-    let selectedValue = this.innerText.toLowerCase();
-    selectValue.innerText = this.innerText;
-    elementToggleFunc(select);
-    filterFunc(selectedValue);
-
+  // attributes that can't hold bilingual child elements (alt, aria-label...)
+  document.querySelectorAll('[data-i18n-attr]').forEach(el => {
+    el.dataset.i18nAttr.split(',').forEach(attr => {
+      const value = el.getAttribute('data-' + attr + '-' + lang);
+      if (value !== null) el.setAttribute(attr, value);
+    });
   });
-}
+};
 
-// filter variables
-const filterItems = document.querySelectorAll("[data-filter-item]");
+langToggles.forEach(btn => btn.addEventListener('click', function () {
+  const next = root.getAttribute('data-lang') === 'pt' ? 'en' : 'pt';
+  store.set('lang', next);
+  applyLang(next);
+}));
 
-const filterFunc = function (selectedValue) {
+// a ?lang= link choice is remembered for the next pages
+const urlLang = new URLSearchParams(window.location.search).get('lang');
+if (urlLang === 'pt' || urlLang === 'en') store.set('lang', urlLang);
 
-  for (let i = 0; i < filterItems.length; i++) {
-
-    if (selectedValue === "todos") {
-      filterItems[i].classList.add("active");
-    } else if (selectedValue === filterItems[i].dataset.category) {
-      filterItems[i].classList.add("active");
-    } else {
-      filterItems[i].classList.remove("active");
-    }
-
-  }
-
-}
-
-// add event in all filter button items for large screen
-let lastClickedBtn = filterBtn[0];
-
-for (let i = 0; i < filterBtn.length; i++) {
-
-  filterBtn[i].addEventListener("click", function () {
-
-    let selectedValue = this.innerText.toLowerCase();
-    selectValue.innerText = this.innerText;
-    filterFunc(selectedValue);
-
-    lastClickedBtn.classList.remove("active");
-    this.classList.add("active");
-    lastClickedBtn = this;
-
-  });
-
-}
+applyLang(root.getAttribute('data-lang') || 'pt');
 
 
 
-// contact form variables
-const form = document.querySelector("[data-form]");
-const formInputs = document.querySelectorAll("[data-form-input]");
-const formBtn = document.querySelector("[data-form-btn]");
+/*-----------------------------------*\
+  #EXPERIENCE DURATION
+\*-----------------------------------*/
 
-// add event to all form input field
-for (let i = 0; i < formInputs.length; i++) {
-  formInputs[i].addEventListener("input", function () {
+// data-from / data-to as "YYYY-MM"; empty data-to means current job.
+// Months are counted inclusively, like LinkedIn does.
+const formatDuration = function (months, lang) {
+  const y = Math.floor(months / 12);
+  const m = months % 12;
+  const words = lang === 'pt'
+    ? { y: ['ano', 'anos'], m: ['mês', 'meses'], and: ' e ' }
+    : { y: ['yr', 'yrs'], m: ['mo', 'mos'], and: ' ' };
+  const parts = [];
+  if (y) parts.push(y + ' ' + words.y[y > 1 ? 1 : 0]);
+  if (m) parts.push(m + ' ' + words.m[m > 1 ? 1 : 0]);
+  return parts.join(words.and);
+};
 
-    // check form validation
-    if (form.checkValidity()) {
-      formBtn.removeAttribute("disabled");
-    } else {
-      formBtn.setAttribute("disabled", "");
-    }
+document.querySelectorAll('.dur[data-from]').forEach(el => {
+  const [fy, fm] = el.dataset.from.split('-').map(Number);
+  const now = new Date();
+  const [ty, tm] = el.dataset.to ? el.dataset.to.split('-').map(Number) : [now.getFullYear(), now.getMonth() + 1];
+  const months = (ty - fy) * 12 + (tm - fm) + 1;
+  if (months < 1) return;
 
-  });
-}
+  el.innerHTML = '<span lang="pt-BR">' + formatDuration(months, 'pt') + '</span>' +
+                 '<span lang="en">' + formatDuration(months, 'en') + '</span>';
+});
 
 
 
-// page navigation variables
-const navigationLinks = document.querySelectorAll("[data-nav-link]");
-const pages = document.querySelectorAll("[data-page]");
+/*-----------------------------------*\
+  #FOOTER YEAR
+\*-----------------------------------*/
 
-// add event to all nav link
-for (let i = 0; i < navigationLinks.length; i++) {
-  navigationLinks[i].addEventListener("click", function () {
-
-    for (let i = 0; i < pages.length; i++) {
-      if (this.innerHTML.toLowerCase() === pages[i].dataset.page) {
-        pages[i].classList.add("active");
-        navigationLinks[i].classList.add("active");
-        window.scrollTo(0, 0);
-      } else {
-        pages[i].classList.remove("active");
-        navigationLinks[i].classList.remove("active");
-      }
-    }
-
-  });
-}
+document.querySelectorAll('[data-year]').forEach(el => { el.textContent = new Date().getFullYear(); });

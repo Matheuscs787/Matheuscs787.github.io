@@ -1,166 +1,160 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR" data-lang="pt" data-theme="light"
+  data-title-pt="TCC — Reconhecimento de placas · Matheus Souza"
+  data-title-en="Thesis — License plate recognition · Matheus Souza">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TCC</title>
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TCC — Reconhecimento de placas · Matheus Souza</title>
+  <meta name="description" content="TCC: reconhecimento de placas de veículos por meio de imagens com YOLO, OpenCV e Pytesseract.">
+  <link rel="icon" href="./assets/images/favicon.svg?v=2" type="image/svg+xml">
+  <link rel="icon" href="./assets/images/favicon.ico?v=2" sizes="48x48">
+  <link rel="apple-touch-icon" href="./assets/images/apple-touch-icon.png?v=2">
+
+  <script src="./assets/js/prefs.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
-    <!--
-      - #main-content
-    -->
 
-    <div class="main-content2">
-      <!--
-        - #SOBRE
-      -->
+  <header class="site-header">
+    <div class="wrap">
+      <a href="./index.html" class="brand"><i>~/</i>matheus<span class="caret" aria-hidden="true"></span></a>
+      <a href="./index.html" class="back">← <span lang="pt-BR">voltar ao início</span><span lang="en">back to home</span></a>
+      <div class="controls">
+        <button class="ctl" type="button" data-lang-toggle
+          data-i18n-attr="aria-label" data-aria-label-pt="Switch to English" data-aria-label-en="Mudar para português">
+          <span class="opt opt-pt">pt</span>|<span class="opt opt-en">en</span>
+        </button>
+        <button class="ctl" type="button" data-theme-toggle
+          data-i18n-attr="aria-label" data-aria-label-pt="Tema escuro" data-aria-label-en="Dark theme">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
 
-      <article class="sobre  active" data-page="sobre">
+  <main class="wrap">
 
-        <header>
-          <h2 class="h2 article-title">TCC - Informações do projeto</h2>
-        </header>
+    <section class="project-hero">
+      <p class="label"><span lang="pt-BR">trabalho de conclusão de curso</span><span lang="en">undergraduate thesis</span></p>
+      <h1><span lang="pt-BR">Reconhecimento de placas de veículos por meio de imagens</span><span lang="en">Vehicle license plate recognition from images</span></h1>
+      <p class="lead" lang="pt-BR">Trabalho de conclusão de curso em Ciência da Computação. Orientador: Fábio Matsunaga.</p>
+      <p class="lead" lang="en">Undergraduate thesis in Computer Science. Advisor: Fábio Matsunaga.</p>
+      <ul class="chips">
+        <li class="chip">Python</li>
+        <li class="chip">YOLO</li>
+        <li class="chip">OpenCV</li>
+        <li class="chip">Pytesseract</li>
+        <li class="chip"><span lang="pt-BR">API de consulta de placas</span><span lang="en">Plate lookup API</span></li>
+      </ul>
+      <div class="actions">
+        <a class="btn primary" href="./assets/pdf/TCC.pdf" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0-4-4m4 4 4-4M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
+          <span lang="pt-BR">TCC completo (PDF)</span><span lang="en">Full thesis (PDF, PT-BR)</span>
+        </a>
+      </div>
+    </section>
 
-        <section class="sobre-text">
-          <p>Tema: Reconhecimento de placas de veículos por meio de imagens<br>
-             Orientador: Fábio Matsunaga
-          </p>
+    <h2 class="sec-title"><b>01</b> <span lang="pt-BR">sobre</span><span lang="en">about</span></h2>
 
-          <p>
-            Ferramentas utilizadas: Python, YOLO, OpenCV, Pytesseract, API de terceiros para consultar placa.
-          </p>
+    <div class="card prose">
+      <p lang="pt-BR">
+        Para a detecção das placas foi utilizado o YOLO (na época, o estado da arte), uma ferramenta de reconhecimento que faz uso de redes neurais artificiais (RNA).
+        Para isso, o YOLO utiliza uma Rede Neural Convolucional (CNN). A CNN é uma variação da MLP capaz de aplicar filtros em dados visuais e manter a relação de vizinhança entre os pixels da imagem.
+        É comum aplicar camadas de convolução sobre o dado de entrada; essas camadas são compostas por diversos neurônios, cada um responsável por aplicar um filtro em um pedaço específico da imagem.
+      </p>
+      <p lang="en">
+        Plate detection used YOLO (the state of the art at the time), a recognition tool based on artificial neural networks (ANN).
+        YOLO relies on a Convolutional Neural Network (CNN). A CNN is a variation of the MLP that can apply filters to visual data while preserving the neighborhood relationship between pixels.
+        Convolution layers are applied to the input; each layer is made of many neurons, each one responsible for applying a filter to a specific region of the image.
+      </p>
+      <p lang="pt-BR">
+        Com base nos resultados obtidos, apesar de a taxa de acerto do OCR não ter sido tão boa quanto a do detector de placas, conclui-se que é possível identificar a placa de um veículo a partir de fotos ou vídeos e consultar sua situação legal.
+        Além disso, a busca por veículos pode durar mais tempo, pois não é necessário ter vários agentes em campo como em uma blitz, e exige menos recursos, como viaturas e agentes, que podem ser realocados para outras necessidades, como o patrulhamento preventivo.
+      </p>
+      <p lang="en">
+        Based on the results, although the OCR accuracy was not as good as the plate detector's, it is possible to identify a vehicle's plate from photos or videos and check its legal status.
+        It also allows searching for vehicles for longer periods without many officers in the field, as in a roadblock, and requires fewer resources such as patrol cars and officers, which can be reallocated to other needs like preventive patrolling.
+      </p>
+    </div>
 
-          <p>
-            Para a detecção das placas foi utilizado o YOLO(Na época, o YOLO era o estado da arte), ele é uma ferramenta para reconhecimento e que faz uso de rede neural artificial, conhecidas como RNA.
-            Para isso, o YOLO utiliza uma Rede Neural Convolucional. A CNN é uma variação da MLP, que é capaz de aplicar filtros em dados visuais e manter a relação de vizinhança entre os pixels da imagem. É comum aplicar camadas de convolução sobre o dado de entrada, essas camadas são compostas por diversos neurônios, cada um com a responsabilidade de aplicar um filtro em um pedaço específico da imagem, com isso temos diversos filtros sendo aplicados.
-          </p>
+    <h2 class="sec-title"><b>02</b> <span lang="pt-BR">processos</span><span lang="en">pipeline</span></h2>
 
-          <p>
-            Com base nos resultados obtidos, apesar da taxa de acerto do OCR não ter um resultado ótimo como o detector de placas teve, pode se concluir que através de fotos ou vídeos podemos identificar a placa de um veículo e consultar sua situação legal. 
-            Além disso, conseguimos ter um maior tempo buscando veículos pois não é necessário ter vários agentes em campo como no caso de blitz e também é necessário menos recursos para a busca de veículos, como viaturas e agentes, sendo que esses recursos podem ser realocados para outras necessidades, como pratulhamento preventivo.            
-          </p>
-          
-        </section>
+    <div class="steps">
 
+      <article class="card step">
+        <div class="prose">
+          <h3><span lang="pt-BR">ROI e escala de cinza</span><span lang="en">ROI and grayscale</span></h3>
+          <p lang="pt-BR">Quando o YOLO faz a varredura na imagem, ele encontra a região de interesse, chamada de ROI. Com o ROI obtido, são aplicados tratamentos na imagem — escala de cinza e binarização — para dar contraste ao OCR.</p>
+          <p lang="en">When YOLO scans the image, it finds the region of interest (ROI). The ROI then goes through grayscale and binarization to give the OCR more contrast.</p>
+          <p lang="pt-BR">Uma imagem RGB tem 3 conjuntos de valores de 0 a 255, representando vermelho, verde e azul. Ao aplicar a escala de cinza, a imagem passa a ter apenas um conjunto de valores de 0 a 255.</p>
+          <p lang="en">An RGB image has 3 sets of values from 0 to 255 for red, green and blue. After grayscale, the image has a single set of values from 0 to 255.</p>
+        </div>
+        <figure>
+          <div class="shot"><img src="./assets/images/tcc/escala-cinza.png" alt="" width="499" height="101" loading="lazy"></div>
+          <figcaption><span lang="pt-BR">Exemplo do ROI e da escala de cinza.</span><span lang="en">ROI and grayscale example.</span></figcaption>
+        </figure>
+      </article>
 
-        <!--
-          - service
-        -->
+      <article class="card step">
+        <div class="prose">
+          <h3><span lang="pt-BR">Binarização</span><span lang="en">Binarization</span></h3>
+          <p lang="pt-BR">Com a binarização o intervalo diminui ainda mais e passa a ser apenas 0 ou 1.</p>
+          <p lang="en">Binarization narrows the range even further, down to just 0 or 1.</p>
+          <p lang="pt-BR">Para obter o valor de cinza, calcula-se a média dos valores do pixel nos três canais RGB. Na binarização, verifica-se se o valor do pixel em cinza é maior ou menor que a metade do intervalo: se menor, assume 0; se maior, assume 1.</p>
+          <p lang="en">The gray value is the average of the pixel's three RGB channels. For binarization, if the gray value is below half of the range it becomes 0; otherwise it becomes 1.</p>
+        </div>
+        <figure>
+          <div class="shot"><img src="./assets/images/tcc/binarizacao.png" alt="" width="244" height="70" loading="lazy"></div>
+          <figcaption><span lang="pt-BR">Exemplo de binarização.</span><span lang="en">Binarization example.</span></figcaption>
+        </figure>
+      </article>
 
-        <section class="service">
+      <article class="card step">
+        <div class="prose">
+          <h3><span lang="pt-BR">Pipeline e detecção</span><span lang="en">Pipeline and detection</span></h3>
+          <p lang="pt-BR">O pipeline é composto por aquisição da imagem, detecção do objeto, filtragem, OCR e consulta da placa. As imagens vieram de uma câmera situada em uma via, com localização, qualidade e resolução desconhecidas.</p>
+          <p lang="en">The pipeline is image acquisition, object detection, filtering, OCR and plate lookup. Images came from a roadside camera with unknown location, quality and resolution.</p>
+          <p lang="pt-BR">Foi necessário treinar o YOLO com um dataset próprio, pois o padrão não reconhece placas. Na imagem, o detector indica 0,99 de certeza de que o objeto encontrado é uma placa, ou seja, 99%.</p>
+          <p lang="en">YOLO had to be trained on a custom dataset, since the default one doesn't recognize plates. In the image, the detector reports 0.99 confidence that the object is a plate — 99%.</p>
+        </div>
+        <figure>
+          <div class="shot"><img src="./assets/images/tcc/deteccao.png" alt="" width="339" height="188" loading="lazy"></div>
+          <figcaption><span lang="pt-BR">Imagem obtida pela câmera.</span><span lang="en">Image captured by the camera.</span></figcaption>
+        </figure>
+      </article>
 
-          <h3 class="h3 service-title">Processos</h3>
-
-          <ul class="service-list">
-
-            <li class="service-item">
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">ROI e escala de cinza</h4>
-                <p class="service-item-text">
-                    Quando o YOLO faz a varredura na imagem ele encontra minha região de interesse, chamada de ROI. Com o ROI obtido, são realizados alguns tratamentos na imagem, que são a escala de cinza e a binarização.
-                    Os filtros são aplicados para dar o contraste da imagem para o OCR. Uma imagem no padrão RGB, tem 3 conjuntos de valores que vão de 0 a 255 e eles representam as cores vermelho, verde e azul.                     
-                </p>
-                <p class="service-item-text">
-                    Já quando aplicamos o filtro da escala de cinza a imagem passa a ter apenas um conjunto de valores que vai de 0 a 255.
-                </p>
-                <br>
-                <p class="service-item-text">
-                    Exemplo do ROI e da escala de cinza.
-                </p>                
-                <div class="service-icon-box">
-                    <img src="./assets/images/tcc/escala-cinza.png" alt="design icon" width="100%">
-                </div>
-                <br>                
-              </div>
-            </li>
-
-            <li class="service-item">
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Binarização</h4>
-                <p class="service-item-text">
-                    Com a binarização diminuimos esse intervalo ainda mais, e ele passa a ter um intervalo somente entre 0 e 1.
-                    Para obter o valor de cinza, pegamos o valor do pixel em cada conjunto de valores da imagem no padrão RGB e calculamos a média. Já para a binarização, pegamos o valor do pixel na escala de cinza e vemos se o valor dele é maior ou menor que a metade do intervalo que a escala de cinza abrange, caso menor ele assume o valor de 0 e caso maior ele assume o valor de 1.
-                </p>
-                <br>
-                <p class="service-item-text">
-                    Exemplo de Binarização.
-                </p>
-                <div class="service-icon-box">
-                    <img src="./assets/images/tcc/binarizacao.png" alt="Web development icon" width="100%">
-                </div>
-              </div>
-            </li>
-
-            <li class="service-item">
-                <div class="service-content-box">
-                  <h4 class="h4 service-item-title">Pipeline do projeto e exemplo de imagem</h4>                  
-                  <p class="service-item-text">
-                    O pipeline do projeto pode ser representado através da aquisição da imagem, detecção do objeto, filtragem, do OCR e da consulta da placa.
-                  </p>
-                  <p class="service-item-text">
-                    Para a aquisição da imagem foi utilizada uma câmera situada em uma via, sendo que a localização, qualidade e resolução da imagem são desconhecidas.
-                  </p>
-                  <br>
-                  <p class="service-item-text">
-                    Exemplo de imagem obtida pela câmera.
-                  </p>
-                  <div class="service-icon-box">
-                      <img src="./assets/images/tcc/deteccao.png" alt="Web development icon" width="100%">
-                  </div>
-                  <br>
-                  <p class="service-item-text">
-                    Para o YOLO realizar a detecção da placa foi necessário realizar o treinamento de um dataset, pois seu dataset padrão não é treinado para reconhecer placas. 
-                  </p>
-                  <p class="service-item-text">
-                    Na imagem acima, pode ser visto, a certeza do detector de que o objeto encontrado é o objeto buscado, essa taxa é representada por um valor entre 0 e 1. Nesse exemplo o detector tem 0.99 de certeza, ou seja, 99%.
-                  </p>
-                </div>
-            </li>
-
-            <li class="service-item">
-                <div class="service-content-box">
-                  <h4 class="h4 service-item-title">Pesquisa da placa</h4>
-                  <p class="service-item-text">
-                    Após a imagem passar pelo detector, é obtido o ROI e nele é aplicado a escala de cinza e a binarização para dar o contraste, deixando mais evidente os caracteres na imagem.
-                  </p>
-                  <p class="service-item-text">
-                    Após ter o contraste realçado o ROI é passado para o OCR, que é realizado pelo Pytesseract, que é uma biblioteca OpenSource do Tesseract para o Python. E ela é utilizada para o reconhecimento de caracteres.
-                  </p>
-                  <p class="service-item-text">
-                    O tesseract funciona através de reconhecimento de padrões, porém as versões mais recentes agora contam com OCR baseado em RNA. Após o ROI passar pelo OCR é retornado o resultado da identificação de caracteres em um formato de String.
-                  </p>
-                  <p class="service-item-text">
-                    Para consultar a placa, foi utilizada uma API, sendo que a String obtida do OCR é passada como parâmetro para a consulta. Como resposta da consulta na API, os dados do veículo são retornados no formato JSON.
-                  </p>
-                  <br>
-                  <p class="service-item-text">
-                    Exemplo de consulta na API.
-                  </p>
-                  <div class="service-icon-box">
-                      <img src="./assets/images/tcc/json-consulta.png" alt="Web development icon" width="100%">
-                  </div>
-                </div>
-            </li>
-
-          </ul>
-
-        </section>
-
-        <button class="form-btn" type="button" onclick="location.href='./assets/pdf/TCC.pdf'">
-            <ion-icon name="book-outline"></ion-icon>
-            <span>TCC completo em PDF</span>
-          </button>
-
+      <article class="card step">
+        <div class="prose">
+          <h3><span lang="pt-BR">OCR e consulta da placa</span><span lang="en">OCR and plate lookup</span></h3>
+          <p lang="pt-BR">Depois do contraste realçado, o ROI passa pelo OCR com o Pytesseract, biblioteca open source do Tesseract para Python. As versões mais recentes do Tesseract contam com OCR baseado em RNA, e o resultado é retornado como String.</p>
+          <p lang="en">After contrast enhancement, the ROI goes through OCR with Pytesseract, the open source Python wrapper for Tesseract. Recent Tesseract versions use ANN-based OCR, and the result comes back as a String.</p>
+          <p lang="pt-BR">Essa String é enviada como parâmetro para uma API de consulta, que retorna os dados do veículo em JSON.</p>
+          <p lang="en">That String is sent to a lookup API, which returns the vehicle data as JSON.</p>
+        </div>
+        <figure>
+          <div class="shot"><img src="./assets/images/tcc/json-consulta.png" alt="" width="339" height="304" loading="lazy"></div>
+          <figcaption><span lang="pt-BR">Exemplo de consulta na API.</span><span lang="en">API lookup example.</span></figcaption>
+        </figure>
       </article>
 
     </div>
 
   </main>
+
+  <footer class="wrap site-footer">
+    <span>© <span data-year>2026</span> Matheus Souza</span>
+    <a href="./index.html" class="back">← <span lang="pt-BR">voltar ao início</span><span lang="en">back to home</span></a>
+  </footer>
+
+  <script src="./assets/js/script.js"></script>
 
 </body>
 
